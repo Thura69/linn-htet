@@ -17,14 +17,17 @@ export const Logo = () => {
     <div
       className={cn(
         inter.className,
-        "font-bold items-end flex flex-col gap-[-10px]   space-y-[-8px] text-[22px]"
+        "font-bold items-end flex flex-col gap-[-10px]   space-y-[-8px] text-[18px] md:text-[22px]"
       )}
     >
-      <p>
-        {" "}
-        L<div className=" animate-bounce inline-block">i</div>nn Htet{" "}
-      </p>
-      <p>Aung.</p>
+     <p>Ordinary</p>
+    <p>
+      F
+      <span className=" duration-1000 inline-block animate-bounce">
+        o
+      </span>
+      lk.
+    </p>
     </div>
   );
 };

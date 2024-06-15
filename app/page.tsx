@@ -1,5 +1,6 @@
+'use client'
 
-
+import BlurryCursor from "@/components/cursor";
 import { HeroContant } from "@/components/hero/hero-contant";
 import { MobileMenu } from "@/components/mobile-menu";
 import { Text } from "@/components/text";
@@ -10,6 +11,7 @@ export default function Home() {
   <>
     <HeroContant/>
     <MobileMenu/>
+   
   </>
   );
 }
