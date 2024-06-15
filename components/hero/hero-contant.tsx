@@ -51,7 +51,7 @@ setStart(true);
 
   
    if( start)   return (
-        <div className=" h-[400px] lg:h-[600px] container mx-auto flex items-center justify-center">
+        <div className=" h-[350px]  lg:h-[600px] container mx-auto flex items-center justify-center">
          <motion.h1
               initial={{x:-300,opacity:0}}
               animate={{x:0,opacity:1}}

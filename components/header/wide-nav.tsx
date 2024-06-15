@@ -17,8 +17,8 @@ export const WideNav = () => {
   const menuLinks = MENULINK[0];
 
   return (
-    <header className={cn(lato.className, "container   mx-auto")}>
-      <ul className="  grid grid-cols-4  pt-[40px] pb-[20px]">
+    <header className={cn(lato.className, " px-[20px] md:container mx-auto")}>
+      <ul className="  grid grid-cols-1 md:grid-cols-4  pt-[20px] lg:pt-[40px] pb-[20px]">
         <li className="font-bold text-[25px] flex-col flex items-start justify-start">
           <Logo />
         </li>
