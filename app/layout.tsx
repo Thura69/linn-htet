@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { WideNav } from "@/components/header/wide-nav";
 
+import { ReactLenis } from "@studio-freight/react-lenis";
+
 const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,9 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <WideNav/>
+        <WideNav />
+
         {children}
-        </body>
+      </body>
     </html>
   );
 }

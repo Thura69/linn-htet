@@ -139,7 +139,7 @@ export const HeroContant = () => {
             </motion.div>
           </motion.h1>
         </div>
-        {!isVideo && <GradientCursor isActive={false} />}
+        {!isVideo && <BlurryCursor isActive={false} />}
       </>
     );
 };

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 MenuMobileContent;
 import { motion, AnimatePresence } from "framer-motion";
 import { MenuMobileContent } from "./menu-mobile-content";
+import Hamburger from 'hamburger-react'
 
 export const MobileMenu: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -29,10 +30,9 @@ export const MobileMenu: React.FC = () => {
       <AnimatePresence>
         {showButton && (
           <motion.div
-            onClick={() => setOpen((prev) => !prev)}
-            className="w-[35px] h-[35px] flex items-center justify-center fixed  top-[30px] z-50 right-[20px] bg-textPrimary rounded-[50%] cursor-pointer"
+            className="w-[48px] h-[48px]  fixed  top-[30px] z-50 right-[20px] bg-textPrimary flex items-center justify-center rounded-[50%] cursor-pointer"
           >
-            <Menu fill="white" className="w-5 h-5 text-white" />
+          <Hamburger  color="white" size={20} toggled={open} toggle={setOpen} />
           </motion.div>
         )}
       </AnimatePresence>

@@ -47,7 +47,7 @@ export default function BlurryCursor({ isActive }: { isActive: boolean }) {
   }, [isActive]);
 
   return (
-    <div className="relative h-screen">
+    <div className="relative ">
       <div
         style={{
           backgroundColor: `${isActive ? '#713E7C':'#a2a2a2'}`,

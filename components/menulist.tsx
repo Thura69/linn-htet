@@ -36,14 +36,15 @@ const MENULISTS = [
 
 export const MenuList = () => {
   return (
-    <div className={cn(poppins.className,'leading-[85px] absolute top-[25%] left-[53%]')}>
+    <div className={cn(poppins.className,'leading-[100px] absolute top-[20%] left-[53%]')}>
       {MENULISTS.map((e, index) => (
         <motion.h3
           key={index}
           initial={{ x: e.x, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
+          exit={{x:e.x,opacity:0}}
           transition={{ ease: "easeOut", duration: 0.7 }}
-          className="text-[60px] font-[700]"
+          className="text-[65px] font-[800]"
         >
           {e.name}
         </motion.h3>

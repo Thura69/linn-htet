@@ -48,6 +48,7 @@ export const Circle = () => {
         transition={{ ease: "easeOut", duration: 0.5 }}
         initial={{ opacity: 0, y: 5, width: 0, height: 0 }}
         animate={{ opacity: 1, y: 0, width: 450, height: 450 }}
+        exit={{opacity:0,width:0,height:0}}
         className={cn(
           ` bg-[#f2f2f0]`,
           "  w-[420px] h-[420px]   rounded-full "
