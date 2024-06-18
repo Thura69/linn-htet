@@ -12,12 +12,12 @@ export default function LinkButton({
   isActive,
   toggleMenu,
   label,
-  direction,
+  direction ,
 }: {
   isActive: boolean;
   toggleMenu: any;
   label: string;
-  direction: 'dot'|'down'| 'right';
+  direction: 'dot'|'down'| 'right' | 'none';
 }) {
   return (
     <div className={styles.button}>

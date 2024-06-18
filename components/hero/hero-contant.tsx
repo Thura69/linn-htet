@@ -89,10 +89,10 @@ export const HeroContant = () => {
             transition={{ ease: "easeOut", duration: 0.5 }}
             className={cn(
               inter.className,
-              " indent-10 md:indent-[18vw] lg:indent-[5vw] xl:indent-[23vw] relative tracking-wide text-[40px] sm:text-[50px] md:text-[70px] lg:text-[75px] xl:text-[100px]  leading-[50px] md:leading-[70px] lg:leading-[100px]"
+              " indent-10 md:indent-[18vw] lg:indent-[5vw] xl:indent-[10vw] relative tracking-wide text-[40px] sm:text-[50px] md:text-[70px] lg:text-[75px] xl:text-[80px]  leading-[50px] md:leading-[70px] lg:leading-[110px]"
             )}
           >
-            Hey There! Transforming Ideas into Stunning Designs.
+          Developing user-centered designs for the ultimate user experience.
             <motion.div
               onMouseMove={onMouseMove}
               onMouseLeave={onMouseLeave}

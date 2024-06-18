@@ -11,11 +11,13 @@ export const SocialLinks = () => {
     <div>
       <ul>
      <LinkButton direction='dot' label="Social Links" isActive={false} toggleMenu={setTogge} />
-        {SocialLinksData.map((e, index) => (
+      <ul className="flex flex-col gap-2">
+      {SocialLinksData.map((e, index) => (
           <Text varient='primary' link key={index}>
             {e.name}
           </Text>
         ))}
+      </ul>
       </ul>
     </div>
   );

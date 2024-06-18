@@ -20,13 +20,13 @@ export const Logo = () => {
         "font-bold items-end flex flex-col gap-[-10px]   space-y-[-8px] text-[18px] md:text-[22px]"
       )}
     >
-     <p>Ordinary</p>
+     <p>Linn Htet</p>
     <p>
-      F
+      A
       <span className=" duration-1000 inline-block animate-bounce">
-        o
+        u
       </span>
-      lk.
+      ng.
     </p>
     </div>
   );
