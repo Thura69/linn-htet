@@ -23,7 +23,7 @@ export const Logo = () => {
      <p>Linn Htet</p>
     <p>
       A
-      <span className=" duration-1000 inline-block animate-bounce">
+      <span className=" duration-1000 inline-block">
         u
       </span>
       ng.

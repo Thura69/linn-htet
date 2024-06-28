@@ -1,4 +1,5 @@
 'use client';
+import { cn } from '@/lib/utils';
 import styles from './style.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react'; 
@@ -29,7 +30,8 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
         //Change width of images between 33.33% and 66.66% based on cursor
         const firstImagePercent = 66.66 - (currentXPercent * 0.33);
         const secondImagePercent = 33.33 + (currentXPercent * 0.33);
-        console.log(secondImagePercent)
+
+
         firstImage.current.style.width = `${firstImagePercent}%`
         secondImage.current.style.width = `${secondImagePercent}%`
         
@@ -43,13 +45,14 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
     }
 
     return(
-      <div onMouseMove={(e) => {manageMouseMove(e)}} className={styles.double}>
+      <div   onMouseMove={(e) => {manageMouseMove(e)}} className={cn(styles.double)}>
   
         <div ref={firstImage} className={styles.imageContainer}>
           <div className={styles.stretchyWrapper}>
             <Image 
               src={`/images/${projects[0].src}`}
               fill={true}
+              className=' object-cover object-contain'
               alt={"image"}
             />
           </div>

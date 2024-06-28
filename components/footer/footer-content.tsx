@@ -25,7 +25,7 @@ const Section2 = () => {
   return (
     <div className="flex justify-between   items-center">
       <p className=" font-medium w-[40%]  text-[5rem]">© 2024</p>
-      <h1 className="text-[6rem]  w-[60%]  font-[500] leading-[0.8]">
+      <h1 className="text-[5rem]  w-[60%]  font-[500] leading-[0.8]">
         Linn Htet Aung
       </h1>
     </div>
@@ -35,49 +35,49 @@ const Section2 = () => {
 const Nav = () => {
   return (
     <div className="flex w-full ">
-      <div className="flex w-[40%] flex-col gap-2">
+      <div className="flex   w-[40%] flex-col gap-2">
         <div className=" text-textSecondary">
           <LinkButton
             direction="down"
-            label="About"
+            label="Quick Links"
             isActive={false}
             toggleMenu={() => {}}
           />
         </div>
         <p>Home</p>
         <p>Projects</p>
-        <p>Our Mission</p>
-        <p>Contact Us</p>
+        <p>Case Studies</p>
+        <p>Design Diversions</p>
       </div>
       <div className="w-[60%] flex justify-between gap-20 ">
         <div className="flex flex-col gap-2">
           <div className=" text-textSecondary">
             <LinkButton
               direction="right"
-              label="Education"
+              label="Social Links"
               isActive={false}
               toggleMenu={() => {}}
             />
           </div>
-          <p>News</p>
-          <p>Learn</p>
-          <p>Certification</p>
-          <p>Publications</p>
+          <p>Instagram</p>
+          <p>Twitter</p>
+          <p>Behance</p>
+          <p>You Tube</p>
         </div>
-        <div className="flex flex-col gap-2">
-          <div className=" text-textSecondary">
-            <LinkButton
-              direction="right"
-              label="Education"
-              isActive={false}
-              toggleMenu={() => {}}
-            />
-          </div>
-          <p>News</p>
-          <p>Learn</p>
-          <p>Certification</p>
-          <p>Publications</p>
+        <div className="flex w-[40%] flex-col gap-2">
+        <div className=" text-textSecondary">
+          <LinkButton
+            direction="down"
+            label="Info Links"
+            isActive={false}
+            toggleMenu={() => {}}
+          />
         </div>
+        <p>Certificates</p>
+        <p>Resume</p>
+        {/* <p>Case Studies</p>
+        <p>Design Diversions</p> */}
+      </div>
       </div>
     </div>
   );

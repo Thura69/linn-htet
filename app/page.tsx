@@ -19,8 +19,6 @@ export default function Home() {
         <HeroContant />
         <div className="container  mx-auto">
         <div className="grid  grid-cols-4 col-end-4">
-        <div></div>
-          <div></div>
 
           <LinkButton
             direction="down"

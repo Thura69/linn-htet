@@ -34,9 +34,9 @@ const MENULISTS = [
   }
 ];
 
-export const MenuList = () => {
+export const MenuList = ({className}:{className?:string}) => {
   return (
-    <div className={cn(poppins.className,'leading-[100px] absolute top-[20%] left-[53%]')}>
+    <div className={cn(poppins.className,' leading-[50px] md:leading-[100px] absolute top-[60%] left-[53%]',className)}>
       {MENULISTS.map((e, index) => (
         <motion.h3
           key={index}
@@ -44,7 +44,7 @@ export const MenuList = () => {
           animate={{ x: 0, opacity: 1 }}
           exit={{x:e.x,opacity:0}}
           transition={{ ease: "easeOut", duration: 0.7 }}
-          className="text-[65px] font-[800]"
+          className=" text-[25px]   md:text-[65px] font-[800]"
         >
           {e.name}
         </motion.h3>
