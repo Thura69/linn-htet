@@ -18,7 +18,7 @@ export default function Home() {
       <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
         <HeroContant />
         <div className="container  mx-auto">
-        <div className="grid  grid-cols-4 col-end-4">
+        <div className="grid  grid-cols-2  col-end-2">
 
           <LinkButton
             direction="down"

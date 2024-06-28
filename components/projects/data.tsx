@@ -3,7 +3,7 @@ export const projects = [
     name: "Bread-Box",
     client: "ET Studio",
     description: "Introducing our innovative food shop application designed to streamline the ordering process and reduce wait times.",
-    src: "12.jpg",
+    src: "cover_photo_bread.jpg",
     year: 2022,
   },
   {

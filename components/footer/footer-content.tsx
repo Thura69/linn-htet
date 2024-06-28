@@ -4,8 +4,8 @@ import LinkButton from "../links-button";
 
 export default function Content() {
   return (
-    <div className="bg-[#4E4E5A]  py-8 px-12 h-full w-full ">
-      <div className="container mx-auto h-full flex flex-col justify-between">
+    <div className="bg-[#4E4E5A]  md:py-8 md:px-12 h-full w-full ">
+      <div className="container mx-auto h-full flex flex-col justify-center">
         <Section1 />
         <Section2 />
       </div>
@@ -15,7 +15,7 @@ export default function Content() {
 
 const Section1 = () => {
   return (
-    <div className="h-[80%] flex items-center justify-center">
+    <div className="h-[80%] flex items-center my-4 justify-center">
       <Nav />
     </div>
   );
@@ -24,8 +24,8 @@ const Section1 = () => {
 const Section2 = () => {
   return (
     <div className="flex justify-between   items-center">
-      <p className=" font-medium w-[40%]  text-[5rem]">© 2024</p>
-      <h1 className="text-[5rem]  w-[60%]  font-[500] leading-[0.8]">
+      <p className=" font-medium w-[50%]   text-[1.2rem] md:text-[4rem]">© 2024</p>
+      <h1 className="text-[1.2rem]  md:text-[4rem]  w-[50%]  font-[500] leading-[0.8]">
         Linn Htet Aung
       </h1>
     </div>
@@ -34,8 +34,8 @@ const Section2 = () => {
 
 const Nav = () => {
   return (
-    <div className="flex w-full ">
-      <div className="flex   w-[40%] flex-col gap-2">
+    <div className="flex flex-col md:flex-row w-full gap-5 ">
+      <div className="flex   md:w-[40%] flex-col gap-2">
         <div className=" text-textSecondary">
           <LinkButton
             direction="down"
@@ -45,12 +45,12 @@ const Nav = () => {
           />
         </div>
         <p>Home</p>
-        <p>Projects</p>
+        <p>Projects</p> 
         <p>Case Studies</p>
         <p>Design Diversions</p>
       </div>
-      <div className="w-[60%] flex justify-between gap-20 ">
-        <div className="flex flex-col gap-2">
+      <div className=" w-full  md:w-[60%]  flex md:flex-row flex-col gap-5  justify-between  md:gap-20 ">
+        <div className="flex  w-[40%] flex-col gap-2">
           <div className=" text-textSecondary">
             <LinkButton
               direction="right"
@@ -64,7 +64,7 @@ const Nav = () => {
           <p>Behance</p>
           <p>You Tube</p>
         </div>
-        <div className="flex w-[40%] flex-col gap-2">
+        <div className="flex md:w-[40%] flex-col gap-2">
         <div className=" text-textSecondary">
           <LinkButton
             direction="down"

@@ -51,8 +51,8 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
           <div className={styles.stretchyWrapper}>
             <Image 
               src={`/images/${projects[0].src}`}
+              className=' cursor-pointer'
               fill={true}
-              className=' object-cover object-contain'
               alt={"image"}
             />
           </div>
@@ -67,6 +67,7 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
           <div className={styles.stretchyWrapper}>
             <Image 
               src={`/images/${projects[1].src}`}
+              className=' cursor-pointer'
               fill={true}
               alt={"image"}
             />

@@ -39,7 +39,7 @@ export const MobileMenu: React.FC = () => {
             />
           </motion.div>
         )}
-        <motion.div className="w-[48px] h-[48px] scale-75 flex  md:hidden fixed top-[20px] z-50 right-[100px] bg-textPrimary items-center justify-center rounded-[50%] cursor-pointer">
+        <motion.div className="w-[48px] h-[48px] scale-75 flex  md:hidden fixed top-[20px] z-50 right-[20px] bg-textPrimary items-center justify-center rounded-[50%] cursor-pointer">
           <Hamburger color="white" size={20} toggled={open} toggle={setOpen} />
         </motion.div>
       </AnimatePresence>

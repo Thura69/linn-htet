@@ -66,7 +66,7 @@ export const HeroContant = () => {
   if (start)
     return (
       <>
-        <div className=" h-[450px]  lg:h-[600px] container mx-auto flex items-center justify-center">
+        <div className=" h-[400px] lg:h-[600px] container mx-auto flex items-center justify-center">
           <motion.h1
             initial={{ x: -300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -90,7 +90,7 @@ export const HeroContant = () => {
             transition={{ ease: "easeOut", duration: 0.5 }}
             className={cn(
               inter.className,
-              " indent-10 md:indent-[18vw] lg:indent-[5vw] xl:indent-[10vw] relative tracking-wide text-[40px] sm:text-[50px] md:text-[70px] lg:text-[75px] xl:text-[80px]  leading-[50px] md:leading-[70px] lg:leading-[110px] "
+              " indent-10 md:indent-[18vw] lg:indent-[5vw] xl:indent-[10vw] relative tracking-wide text-[40px] sm:text-[50px] md:text-[70px] lg:text-[75px] xl:text-[80px]  leading-[54px] md:leading-[70px] lg:leading-[110px]"
             )}
           >
           Developing user-centered designs for the ultimate user experience.

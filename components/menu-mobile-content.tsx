@@ -13,29 +13,22 @@ export const MenuMobileContent = () => {
 
   return (
     <>
-      <div className=" h-[100svh] ml-[-85px] relative flex items-center justify-center  ">
-        <div className="fixed container flex items-center justify-start top-[20px] px-[57px]  ">
+      <div className=" h-[100svh] ml-[-2px] relative flex items-center justify-center  ">
+        <div className="fixed container  flex items-center justify-start top-[18px] px-[57px]  ">
           <Logo />
         </div>
         {isDesktop ? <Circle /> : <NoMotionCircle />}
       </div>
       <div>
-        <MenuList className=" left-[50px] md:left-[80px] top-[25%]" />
+     
+        <MenuList className=" left-[30px] md:left-[80px] md:top-[20%] top-[25%]" />
+   
         <div className="absolute left-[60px] md:w-[300px] bottom-[150px] "></div>
+        <div className=" absolute  w-full md:w-[300px] md:left-[80%] left-[30px] bottom-[40px]  md:bottom-[60px] right-0">
+        <SocialLinks/>
+        </div>
+       
       </div>
     </>
-    // <div className=" fixed top-0 bottom-0 animate-menu-fade md:flex items-center justify-center  right-0 left-0 bg-[#e8e8e3] ">
-    //
-    //   <div className="h-[100svh] bg-yellow-300 flex items-center justify-center">
-    //   <div className="border-2 bg-blue-400">
-    //   <Circle />
-    //
-    //   </div>
-    //   </div>
-    //   {/* <div className="container relative flex bg-yellow-400 items-center justify-center  mx-auto ">
-
-    //
-    //   </div> */}
-    // </div>
   );
 };
