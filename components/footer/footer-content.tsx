@@ -25,7 +25,7 @@ const Section2 = () => {
   return (
     <div className="flex justify-between   items-center">
       <p className=" font-medium w-[50%]   text-[1.2rem] md:text-[4rem]">© 2024</p>
-      <h1 className="text-[1.2rem]  md:text-[4rem]  w-[50%]  font-[500] leading-[0.8]">
+      <h1 className="text-[1.2rem] md:text-[4rem]  w-[50%]  font-[500] leading-[0.8]">
         Linn Htet Aung
       </h1>
     </div>

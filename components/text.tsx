@@ -7,9 +7,10 @@ type TextProps = {
   children: React.ReactNode;
   active?: boolean;
   link?: boolean;
+  url?:string
 };
 
-export const Text: React.FC<TextProps> = ({ varient, children, link,active }) => {
+export const Text: React.FC<TextProps> = ({ varient, children, link,url,active }) => {
   return (
     <div
       className={cn(
@@ -25,8 +26,8 @@ export const Text: React.FC<TextProps> = ({ varient, children, link,active }) =>
         </p>
       ) : (
         <Link
-          className={cn('cursor-pointer duration-500 hover:text-textSecondary',active && 'text-textPrimary')}
-          href={"/"}
+          className={cn('cursor-pointer  duration-500 hover:text-textSecondary',active && 'text-textPrimary')}
+          href={`${url}`}
         >
           {children}
         </Link>

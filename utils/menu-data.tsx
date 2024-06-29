@@ -10,20 +10,20 @@ export const MENULINK: MenuLinkType[] = [
       },
       {
         name: "Projects",
-        link: "/",
+        link: "/projects",
         active:false
       },
     ],
     two: [
       {
         name: "Case Studies",
-        link: "/",
+        link: "/case-studies",
         active:false
 
       },
       {
         name: "Design Diversions",
-        link: "/play",
+        link: "/design-diversions",
         active:false
 
       },
@@ -31,7 +31,7 @@ export const MENULINK: MenuLinkType[] = [
     three: [
       {
         name: "Contact",
-        link: "/",
+        link: "/contact",
         active:false
 
       },

@@ -25,7 +25,7 @@ export const WideNav = () => {
         {Object.keys(menuLinks).map((section, index) => (
           <li key={index} className={cn(menuCss)}>
             {menuLinks[section as keyof MenuLinkType].map((link, idx) => (
-             <Text active={link.active} key={idx} varient={"secondary"}>
+             <Text active={link.active} url={link.link}  key={idx} varient={"secondary"}>
                 {link.name}
              </Text>
             ))}
