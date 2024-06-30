@@ -15,7 +15,7 @@ export default function Index({
     <div className='w-full'>
       <div  className={''}>
         <div className={'w-full'}>
-          <Image className=' bg-blue-400' src={`/images/${projects[0].src}`} width={500} height={500}  alt={"image"} />
+          <Image  src={`/images/${projects[0].src}`} width={500} height={500}  alt={"image"} />
         </div>
         <div className={cn(styles.body,'space-y-2 my-2')}>
           <h3 className=' font-semibold'>{projects[0].name}</h3>

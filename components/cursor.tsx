@@ -7,7 +7,7 @@ export default function BlurryCursor({ isActive }: { isActive: boolean }) {
   const delayedMouse = useRef({ x: 0, y: 0 });
   const rafId = useRef<any>(null);
   const circle = useRef<any>();
-  const size = isActive ? 400 : 30;
+  const size = isActive ? 350 : 30;
 
   const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
 
@@ -50,10 +50,10 @@ export default function BlurryCursor({ isActive }: { isActive: boolean }) {
     <div className="relative ">
       <div
         style={{
-          backgroundColor: `${isActive ? '#713E7C':'#a2a2a2'}`,
+          backgroundColor: `${isActive ? '#00BCD8':'#a2a2a2'}`,
           width: size,
           height: size,
-          filter: `blur(${isActive ? 300 : 0}px)`,
+          filter: `blur(${isActive ? 80 : 0}px)`,
           transition: `height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out`,
         }}
         className="top-0 left-0 fixed rounded-full z-[999] mix-blend-difference pointer-events-none"

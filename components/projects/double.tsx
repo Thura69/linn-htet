@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import styles from './style.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react'; 
+import Link from 'next/link';
 
 export default function Index({projects, reversed}:{projects:any,reversed?:any}) {
 
@@ -48,7 +49,8 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
       <div   onMouseMove={(e) => {manageMouseMove(e)}} className={cn(styles.double)}>
   
         <div ref={firstImage} className={styles.imageContainer}>
-          <div className={styles.stretchyWrapper}>
+         <Link href={projects[0].link}>
+         <div  className={styles.stretchyWrapper}>
             <Image 
               src={`/images/${projects[0].src}`}
               className=' cursor-pointer'
@@ -56,6 +58,7 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
               alt={"image"}
             />
           </div>
+         </Link>
           <div className={styles.body}>
               <h3>{projects[0].name}</h3>
               <p>{projects[0].description}</p>
@@ -64,7 +67,8 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
         </div>
   
         <div ref={secondImage} className={styles.imageContainer}>
-          <div className={styles.stretchyWrapper}>
+        <Link  href={projects[1].link}>
+        <div  className={styles.stretchyWrapper}>
             <Image 
               src={`/images/${projects[1].src}`}
               className=' cursor-pointer'
@@ -72,6 +76,7 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
               alt={"image"}
             />
           </div>
+        </Link>
           <div className={styles.body}>
               <h3>{projects[1].name}</h3>
               <p>{projects[1].description}</p>

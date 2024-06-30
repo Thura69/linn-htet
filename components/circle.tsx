@@ -4,7 +4,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { Logo } from "./header/logo";
 
-export const Circle = () => {
+export const Circle = ({leave}:{leave?:boolean}) => {
   const ref: any = useRef(null);
   const [isHover, setIsHover] = useState(false);
 
@@ -47,11 +47,11 @@ export const Circle = () => {
         style={{ x: springX, y: springY }}
         transition={{ ease: "easeOut", duration: 0.5 }}
         initial={{ opacity: 0, y: 5, width: 0, height: 0 }}
-        animate={{ opacity: 1, y: 0, width: 420, height: 420 }}
+        animate={{ opacity: 1, y: 0, width: leave ? 0:420, height: leave? 0 :420 }}
         exit={{opacity:0,width:0,height:0}}
         className={cn(
-          ` bg-[#f2f2f0]`,
-          " w-[200px] h-[200px] border-2  md:w-[420px] md:h-[420px]   rounded-full "
+          ` bg-[#f2f2f0] `,
+          " w-[200px] h-[200px]  md:w-[420px] md:h-[420px]   rounded-full "
         )}
       ></motion.div>
     </>

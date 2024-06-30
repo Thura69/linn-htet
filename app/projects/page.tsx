@@ -4,7 +4,7 @@ import React from 'react'
 
 function Page() {
   return (
-    <div>
+    <div className='container mx-auto'>
         <HeroContantText title='I enjoy bringing UI screens to life through real-world projects.'/>
     </div>
   )
