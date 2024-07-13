@@ -10,18 +10,20 @@ type ToolUsedTypes = {
   figma: boolean;
   mockup: boolean;
   ai: boolean;
-  ps: boolean;
+  ps?: boolean;
+  color?: any
 };
 
 type ToolContainerTypes = {
   src: StaticImageData;
   name: string;
+
 };
 
 const ToolContainer: React.FC<ToolContainerTypes> = ({ src, name }) => {
   return (
     <div className="flex flex-col items-center gap-5">
-      <Image alt="tool-used" src={src} />
+      <Image alt="tool-used"  src={src} />
       <p>{name}</p>
     </div>
   );
@@ -32,10 +34,11 @@ export const ToolUsed: React.FC<ToolUsedTypes> = ({
   mockup,
   ai,
   ps,
+  color = "yellow"
 }) => {
   return (
     <div className="w-full">
-      <ProjectTitle title="Tools Used" />
+      <ProjectTitle color={color} title="Tools Used" />
       <div className="flex justify-between">
         {figma && <ToolContainer src={FIGMA} name="Figma" />}
         {mockup && <ToolContainer src={MOCKUP} name="Mockup" />}

@@ -1,7 +1,32 @@
-import React from 'react'
+import { cn } from "@/lib/utils";
+import React from "react";
 
-export const ProjectTitle = ({title}:{title:string}) => {
+type ProjectTitleType = {
+  title: string;
+  size?: string;
+  color: "blue" | "yellow";
+  amount?:'lg' | 'xl'
+  
+};
+
+export const ProjectTitle: React.FC<ProjectTitleType> = ({
+  title,
+  size = "30",
+  color = 'yellow',
+  amount = 'lg'
+}) => {
   return (
-    <h3 className="text-[30px] mb-5 font-bold text-[#FFC529]">{title}</h3>
-  )
-}
+    <h3
+      className={cn(
+        "text-[30px] mb-5 font-bold",
+        size && `text-[${size}px]`,
+        `text-[#FFC529]`,
+        color === "blue" && "text-[#4062FF]",
+        color === "yellow" && "text-[#FFC529]",
+        amount === 'xl' && 'text-[40px]'
+      )}
+    >
+      {title}
+    </h3>
+  );
+};

@@ -35,10 +35,10 @@ export const HeroContantText: React.FC<HeroContantTextType> = ({
         className={cn(
           inter.className,
           "relative tracking-wide",
-          "text-[40px]  sm:text-[50px] md:text-[70px] lg:text-[75px] xl:text-[80px]",
+          "text-[40px]  sm:text-[50px]  md:text-[70px] lg:text-[75px] xl:text-[80px]",
           indent &&
             "indent-10 md:indent-[18vw] lg:indent-[5vw] xl:indent-[10vw]",
-          "leading-[54px] md:leading-[70px] lg:leading-[110px]"
+          "leading-[54px] md:leading-[70px] lg:leading-[110px] "
         )}
       >
         {title}
