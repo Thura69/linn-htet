@@ -4,7 +4,7 @@ import { ProjectTitle } from "../project-title";
 type ListShowType = {
   title: string;
   data: any[];
-  color?: string;
+  color?: any;
 };
 
 export const ListShowData: React.FC<ListShowType> = ({
@@ -17,7 +17,9 @@ export const ListShowData: React.FC<ListShowType> = ({
       <ProjectTitle color={color} title={title} />
       <ul className=" list-disc">
         {data.map((e, index) => (
-          <li key={index}>{e}</li>
+          <li data-aos="fade-up" data-aos-duration="600" key={index}>
+            {e}
+          </li>
         ))}
       </ul>
     </div>

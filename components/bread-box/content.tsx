@@ -9,7 +9,7 @@ type ContentType = {
 export const Content: React.FC<ContentType> = ({ title, data }) => {
   return (
     <div>
-      <ProjectTitle title={title} />
+      <ProjectTitle color="yellow" title={title} />
       <p className="my-5">{data}</p>
     </div>
   );

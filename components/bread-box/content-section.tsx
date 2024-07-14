@@ -8,7 +8,7 @@ interface ContentSectionType {
   data: string;
   images: StaticImageData[];
   col: string;
-  color?:any
+  color?: any;
 }
 
 export const ContentSection: React.FC<ContentSectionType> = ({
@@ -16,16 +16,27 @@ export const ContentSection: React.FC<ContentSectionType> = ({
   data,
   images,
   col,
-  color = "yellow"
+  color = "yellow",
 }) => {
   return (
     <div>
       <ProjectTitle color={color} title={title} />
-      <p className="my-5">{data}</p>
+      <p data-aos="fade-up" data-aos-duration="600" className="my-5">
+        {data}
+      </p>
 
-      <div className={`grid justify-center  gap-[30px] mt-[40px]  items-center grid-cols-${col}`}>
+      <div
+        className={`grid justify-center  gap-[30px] mt-[40px]  items-center grid-cols-${col}`}
+      >
         {images.map((e, index) => (
-          <Image className={cn("mx-auto  w-[150px]",col === "1" && 'w-auto')} alt="images" key={index} src={e} />
+          <Image
+            data-aos="fade-right"
+            data-aos-duration="600"
+            className={cn("mx-auto  w-[150px]", col === "1" && "w-auto")}
+            alt="images"
+            key={index}
+            src={e}
+          />
         ))}
       </div>
     </div>

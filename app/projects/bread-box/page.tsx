@@ -2,7 +2,7 @@
 import BlurryCursor from "@/components/cursor";
 import { HeroContantText } from "@/components/hero/hero-contant-text";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BreadOne from "@/public/images/bread-box/Baker-cuate 1.png";
 import BreadLogo from "@/public/images/bread-box/Frame 5.png";
 import BreadSubOne from "@/public/images/bread-box/Frame 18.png";
@@ -54,6 +54,8 @@ import ACTIONMODE from "@/public/images/bread-box/Frame 34580.png";
 import { SquareMap } from "@/components/bread-box/task-list-data";
 import Footer from "@/components/footer/footer";
 import { ReactLenis } from "@studio-freight/react-lenis";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Page() {
   const [active, setActive] = useState(false);
@@ -62,10 +64,14 @@ function Page() {
     setActive((prev) => !prev);
   };
 
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <>
       <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
-        <div className=" bg-[#e8e8e3]">
+        <div className=" bg-[#FFC529]">
           <div className="container">
             <HeroContantText
               handleHover={handleHover}
@@ -74,9 +80,8 @@ function Page() {
               title="Bread Box"
             />
           </div>
-       
         </div>
-        <div className="bg-white  container mx-auto">
+        <div className="bg-white overflow-hidden  container mx-auto">
           <div className="py-5  pb-[200px]  space-y-20">
             {/* first section */}
             <div className="w-full  gap-[20px] flex items-center bg-white">
@@ -96,15 +101,23 @@ function Page() {
                   height={300}
                 />
 
-                <p className="w-[90%]">
-                  Stop using the app if it doesn't share enough information with
+                <p
+                  data-aos="zoom-out-left"
+                  data-aos-duration="600"
+                  className="w-[90%]"
+                >
+                  Stop using the app if it doesn&apos;t share enough information with
                   the shop. My goal is to give customers all the details they
                   need.
                 </p>
               </div>
             </div>
 
-            <h3 className=" text-[18px] my-4 mb-6 indent-[100px]">
+            <h3
+              data-aos="zoom-out-left"
+              data-aos-duration="600"
+              className=" text-[18px] my-4 mb-6 indent-[100px]"
+            >
               Introducing our innovative food shop application designed to
               streamline the ordering process and reduce wait times. In response
               to the high demand at food shops, our app provides real-time
@@ -121,6 +134,7 @@ function Page() {
               {PROJECTCATEGORYDATA.map((data, index) => (
                 <ProjectCategory
                   key={data.id}
+                  color="yellow"
                   title={data.title}
                   data={data.data}
                 />
@@ -159,6 +173,8 @@ function Page() {
                   ))}
                 </div>
                 <Image
+                  data-aos="fade-right"
+                  data-aos-duration="600"
                   alt="foodmockup"
                   className="w-[50%]"
                   src={FOODPANDAMOCKUP}
@@ -169,6 +185,8 @@ function Page() {
               <div className="flex items-center gap-[30px]">
                 <Image
                   alt="foodmockup"
+                  data-aos="fade-left"
+                  data-aos-duration="600"
                   className="w-[50%]"
                   src={FOODPANDAMOCKUPTWO}
                   width={200}
@@ -187,7 +205,14 @@ function Page() {
             {/* GRAB SECTION */}
             <div>
               <div className=" flex items-center justify-center">
-                <Image alt="food" src={GRABLOGO} width={150} height={150} />
+                <Image
+                  data-aos="fade-right"
+                  data-aos-duration="600"
+                  alt="food"
+                  src={GRABLOGO}
+                  width={150}
+                  height={150}
+                />
               </div>
               <div className="flex  items-center gap-[30px]">
                 <div className="w-[50%]">
@@ -196,6 +221,8 @@ function Page() {
                   ))}
                 </div>
                 <Image
+                  data-aos="fade-left"
+                  data-aos-duration="600"
                   alt="foodmockup"
                   className="w-[50%]"
                   src={GRAPMOCKUP}
@@ -205,6 +232,8 @@ function Page() {
               </div>
               <div className="flex items-center gap-[30px]">
                 <Image
+                  data-aos="fade-right"
+                  data-aos-duration="600"
                   alt="foodmockup"
                   className="w-[50%]"
                   src={GRAPMOCKUPTWO}
@@ -225,9 +254,11 @@ function Page() {
             <div>
               {USERSURVEYDATA.map((e, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <ProjectTitle color="yellow" title={e.title} />
-                    <p>{e.data}</p>
+                    <p data-aos="fade-up" data-aos-duration="600">
+                      {e.data}
+                    </p>
                     <div className=" space-y-5 my-[40px]">
                       {e.progress.map((progressData, index) => (
                         <ProjectProgressBar
@@ -268,19 +299,40 @@ function Page() {
             {/* STORY BOARD */}
 
             {USERSTORYBOARD.map((e, index) => (
-              <div>
+              <div key={index}>
                 <ProjectTitle color="yellow" title={e.title} />
-                <p>{e.data}</p>
+                <p data-aos="fade-up" data-aos-duration="600">
+                  {e.data}
+                </p>
                 <div className="flex gap-[30px] my-[30px]">
-                  <Image alt="user" src={e.img} width={200} height={200} />
+                  <Image
+                    data-aos="fade-right"
+                    data-aos-duration="600"
+                    alt="user"
+                    src={e.img}
+                    width={200}
+                    height={200}
+                  />
                   <div className="flex flex-col justify-between">
                     <div>
-                      <ProjectTitle color="yellow" size="25" title={e.userInfo[0].title} />
-                      <p>{e.userInfo[0].data}</p>
+                      <ProjectTitle
+                        color="yellow"
+                        size="25"
+                        title={e.userInfo[0].title}
+                      />
+                      <p data-aos="fade-up" data-aos-duration="600">
+                        {e.userInfo[0].data}
+                      </p>
                     </div>
                     <div>
-                      <ProjectTitle color="yellow" size="25" title={e.userInfo[1].title} />
-                      <p>{e.userInfo[1].data}</p>
+                      <ProjectTitle
+                        color="yellow"
+                        size="25"
+                        title={e.userInfo[1].title}
+                      />
+                      <p data-aos="fade-up" data-aos-duration="600">
+                        {e.userInfo[1].data}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -297,10 +349,14 @@ function Page() {
             {/* JOURNEY MAP */}
             <div>
               <ProjectTitle color="yellow" title={USERJOURNEYMAP[0].title!} />
-              <p>{USERJOURNEYMAP[0].data}</p>
+              <p data-aos="fade-up" data-aos-duration="600">
+                {USERJOURNEYMAP[0].data}
+              </p>
 
               <div className="flex items-start justify-center gap-[30px] my-[30px]">
                 <Image
+                  data-aos="fade-up"
+                  data-aos-duration="600"
                   src={USERJOURNEYMAP[1].image!}
                   className="w-[200px] h-[200px]"
                   alt="thu thu"
@@ -308,11 +364,21 @@ function Page() {
                   height={300}
                 />
                 <div className=" space-y-4">
-                  <p className=" font-bold">{USERJOURNEYMAP[1].name}</p>
-                  <p>{USERJOURNEYMAP[1].data}</p>
+                  <p
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                    className=" font-bold"
+                  >
+                    {USERJOURNEYMAP[1].name}
+                  </p>
+                  <p data-aos="fade-up" data-aos-duration="600">
+                    {USERJOURNEYMAP[1].data}
+                  </p>
                 </div>
               </div>
               <Image
+                data-aos="fade-up"
+                data-aos-duration="600"
                 src={ACTIONMODE}
                 alt="actionMode"
                 className="w-[1000px] my-[50px] mx-auto"
@@ -322,7 +388,7 @@ function Page() {
 
               <div className=" space-y-4">
                 {TASKLISTDATA.map((e, index) => (
-                  <SquareMap title={e.title} data={e.data} />
+                  <SquareMap key={index} title={e.title} data={e.data} />
                 ))}
               </div>
             </div>
@@ -331,10 +397,14 @@ function Page() {
             {/* flowDiagram */}
 
             {FLOWDIAGRAM.map((e, index) => (
-              <div className=" space-y-3">
+              <div key={index} className=" space-y-3">
                 <ProjectTitle color="yellow" title={e.title} />
-                <p>{e.data}</p>
+                <p data-aos="fade-up" data-aos-duration="600">
+                  {e.data}
+                </p>
                 <Image
+                  data-aos="fade-up"
+                  data-aos-duration="600"
                   src={e.image}
                   alt="ee"
                   className="w-[600px] pt-[60px] h-auto mx-auto"
@@ -399,6 +469,7 @@ function Page() {
             {/* project summary */}
             {PROJECTSUMMARY.map((e, index) => (
               <ContentSection
+                key={index}
                 col="1"
                 title={e.title}
                 data={e.data}

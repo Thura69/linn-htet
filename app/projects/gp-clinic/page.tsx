@@ -3,7 +3,7 @@ import BlurryCursor from "@/components/cursor";
 import Footer from "@/components/footer/footer";
 import { HeroContantText } from "@/components/hero/hero-contant-text";
 import { ReactLenis } from "@studio-freight/react-lenis";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GPCLINIC from "@/public/images/gp-clinic/Medicine-cuate 1.png";
 import LOGO from "@/public/images/gp-clinic/Group 22.png";
 import Image from "next/image";
@@ -25,7 +25,15 @@ import ProjectDuration from "@/components/gp-clinic/project-duration";
 import { ToolUsed } from "@/components/tool-used";
 import { ProjectTitle } from "@/components/project-title";
 import { ContentSection } from "@/components/bread-box/content-section";
-import HIGHPROTO from '@/public/images/gp-clinic/3.png';
+import HIGHPROTO from "@/public/images/gp-clinic/3.png";
+import UIPRESENTATIONONE from "@/public/images/gp-clinic/Group 26.png";
+import UIPRESENTATIONTWO from "@/public/images/gp-clinic/Group 3378.png";
+import UIPRESENTATIONTHREE from "@/public/images/gp-clinic/Frame 34583.png";
+import UIPRESENTATIONFOUR from "@/public/images/gp-clinic/Frame 163.png";
+import UIPRESENTATIONFIVE from "@/public/images/gp-clinic/Frame 34584.png";
+import UIPRESENTATIONSIX from "@/public/images/gp-clinic/Frame 34585.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Page() {
   const [active, setActive] = useState(false);
@@ -33,6 +41,10 @@ function Page() {
   const handleHover = () => {
     setActive((prev) => !prev);
   };
+
+  useEffect(() => {
+    AOS.init({});
+  }, []);
 
   return (
     <>
@@ -47,7 +59,7 @@ function Page() {
             />
           </div>
         </div>
-        <div className="bg-white container mx-auto">
+        <div className="bg-white overflow-hidden container mx-auto">
           <div className="py-5  pb-[200px]  space-y-20">
             {/* first section */}
             <div className="w-full  gap-[20px] flex items-center bg-white">
@@ -67,8 +79,8 @@ function Page() {
                   height={300}
                 />
 
-                <p className="w-[90%]">
-                  Stop using the app if it doesn't share enough information with
+                <p data-aos="zoom-out-left" className="w-[90%]">
+                  Stop using the app if it doesn&apos;t share enough information with
                   the shop. My goal is to give customers all the details they
                   need.
                 </p>
@@ -79,6 +91,7 @@ function Page() {
             <div className=" grid grid-cols-3 justify-center items-center gap-4">
               {PROJECTCATEGORYDATA.map((data, index) => (
                 <ProjectCategory
+                  
                   color="blue"
                   key={data.id}
                   title={data.title}
@@ -107,7 +120,11 @@ function Page() {
 
             {/* project duration */}
 
-            <ProjectTitle color="blue" title="Project Instructions" amount="xl"/>
+            <ProjectTitle
+              color="blue"
+              title="Project Instructions"
+              amount="xl"
+            />
 
             {/* Doctor */}
             {DOCTORPROJECTDATA.map((e, index) => (
@@ -155,10 +172,14 @@ function Page() {
 
             {/* JOURNEY MAP */}
             {FLOWDIAGRAM.map((e, index) => (
-              <div className=" space-y-3">
+              <div key={index} className=" space-y-3">
                 <ProjectTitle color="blue" title={e.title} />
-                <p>{e.data}</p>
+                <p data-aos="fade-up" data-aos-duration="600">
+                  {e.data}
+                </p>
                 <Image
+                  data-aos="fade-left"
+                  data-aos-duration="600"
                   src={e.image}
                   alt="ee"
                   className="w-[600px]  pt-[60px] h-auto mx-auto"
@@ -174,13 +195,19 @@ function Page() {
               <div key={index}>
                 <ListShowData color="blue" title={e.title} data={e.data} />
                 <Image
+                  data-aos="fade-right"
+                  data-aos-duration="600"
                   src={e.image}
                   alt="ee"
                   className="w-[600px]  pt-[60px] h-auto mx-auto"
                   width={200}
                   height={200}
                 />
-                <p className="mx-auto text-center my-[20px]">
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                  className="mx-auto text-center my-[20px]"
+                >
                   The initial wireframe was crafted using a mockup application.
                 </p>
               </div>
@@ -196,36 +223,105 @@ function Page() {
                 title={e.title}
                 data={e.data}
                 images={e.images}
-                color={'blue'}
+                color={"blue"}
               />
             ))}
             {/* HEIGHTUIDESIGN */}
 
             {/* HIGHTPROTO */}
             <div>
-            <ProjectTitle color="blue" title={'High-Fidelity Prototype'} />
-            <Image
-                  src={HIGHPROTO}
-                  alt="ee"
-                  className="w-[600px]  pt-[60px] h-auto mx-auto"
-                  width={200}
-                  height={200}
-                />
-               <p className="mx-auto text-center my-[20px]">
-               Incorporating high-fidelity screens with a seamless user experience, promoting a user-centric design approach accessible to all users.
-                </p>
-
+              <ProjectTitle color="blue" title={"High-Fidelity Prototype"} />
+              <Image
+                data-aos="fade-right"
+                data-aos-duration="600"
+                src={HIGHPROTO}
+                alt="ee"
+                className="w-[600px]  pt-[60px] h-auto mx-auto"
+                width={200}
+                height={200}
+              />
+              <p
+                data-aos="fade-up-right"
+                className="mx-auto text-center my-[20px]"
+              >
+                Incorporating high-fidelity screens with a seamless user
+                experience, promoting a user-centric design approach accessible
+                to all users.
+              </p>
             </div>
             {/* HIGHTPROTO */}
 
-            <ProjectTitle color="blue" title="UI Presentation" amount="xl"/>
+            <ProjectTitle color="blue" title="UI Presentation" amount="xl" />
+
+            <div className=" space-y-6">
+              <Image
+                data-aos="fade-right"
+                data-aos-duration="600"
+                src={UIPRESENTATIONONE}
+                alt="ee"
+                className="w-[800px]  pt-[60px] h-auto mx-auto"
+                width={300}
+                height={300}
+              />
+              <Image
+                data-aos="fade-left"
+                data-aos-duration="600"
+                src={UIPRESENTATIONTWO}
+                alt="ee"
+                className="w-[800px]  pt-[60px] h-auto mx-auto"
+                width={300}
+                height={300}
+              />
+              <Image
+                data-aos="fade-right"
+                data-aos-duration="600"
+                src={UIPRESENTATIONTHREE}
+                alt="ee"
+                className="w-[800px]  pt-[60px] h-auto mx-auto"
+                width={300}
+                height={300}
+              />
+              <Image
+                data-aos="fade-left"
+                data-aos-duration="600"
+                src={UIPRESENTATIONFOUR}
+                alt="ee"
+                className="w-[800px]  pt-[60px] h-auto mx-auto"
+                width={300}
+                height={300}
+              />
+              <Image
+                data-aos="fade-right"
+                data-aos-duration="600"
+                src={UIPRESENTATIONFIVE}
+                alt="ee"
+                className="w-[800px]  pt-[60px] h-auto mx-auto"
+                width={300}
+                height={300}
+              />
+              <Image
+                data-aos="fade-left"
+                data-aos-duration="600"
+                src={UIPRESENTATIONSIX}
+                alt="ee"
+                className="w-[800px]  pt-[60px] h-auto mx-auto"
+                width={300}
+                height={300}
+              />
+            </div>
+
+
 
             {/* project summary */}
             {PROJECTSUMMARY.map((e, index) => (
-              <div className=" space-y-3">
+              <div key={index} className=" space-y-3">
                 <ProjectTitle color="blue" title={e.title} />
-                <p>{e.data}</p>
+                <p data-aos="fade-up" data-aos-duration="600">
+                  {e.data}
+                </p>
                 <Image
+                  data-aos="fade-up"
+                  data-aos-duration="600"
                   src={e.image}
                   alt="ee"
                   className="w-[600px]  pt-[60px] h-auto mx-auto"
@@ -236,11 +332,6 @@ function Page() {
             ))}
 
             {/* project summary */}
-
-
-
-
-
           </div>
         </div>
         <Footer />

@@ -11,20 +11,26 @@ type ToolUsedTypes = {
   mockup: boolean;
   ai: boolean;
   ps?: boolean;
-  color?: any
+  color?: any;
 };
 
 type ToolContainerTypes = {
   src: StaticImageData;
   name: string;
-
 };
 
 const ToolContainer: React.FC<ToolContainerTypes> = ({ src, name }) => {
   return (
     <div className="flex flex-col items-center gap-5">
-      <Image alt="tool-used"  src={src} />
-      <p>{name}</p>
+      <Image
+        data-aos="fade-up"
+        data-aos-duration="600"
+        alt="tool-used"
+        src={src}
+      />
+      <p data-aos="fade-up" data-aos-duration="600">
+        {name}
+      </p>
     </div>
   );
 };
@@ -34,7 +40,7 @@ export const ToolUsed: React.FC<ToolUsedTypes> = ({
   mockup,
   ai,
   ps,
-  color = "yellow"
+  color = "yellow",
 }) => {
   return (
     <div className="w-full">
