@@ -21,7 +21,7 @@ export default function LinkButton({
   direction: 'dot'|'down'| 'right' | 'none';
 }) {
   return (
-    <div className={cn(styles.button,'!w-full md:w-[300px]')}>
+    <div className={cn(styles.button,'!w-full  md:w-[300px]')}>
       <motion.div
         className={styles.slider}
         animate={{ top: isActive ? "-100%" : "0%" }}

@@ -51,7 +51,7 @@ export const Circle = ({leave}:{leave?:boolean}) => {
         exit={{opacity:0,width:0,height:0}}
         className={cn(
           ` bg-[#f2f2f0] `,
-          " w-[200px] h-[200px]  md:w-[420px] md:h-[420px]   rounded-full "
+          " w-[100px] h-[100px]  lg:w-[420px] lg:h-[420px]   rounded-full "
         )}
       ></motion.div>
     </>

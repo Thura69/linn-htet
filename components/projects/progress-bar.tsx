@@ -11,8 +11,8 @@ export const ProjectProgressBar: React.FC<ProgressBarInterface> = ({
   percent,
 }) => {
   return (
-    <div className="w-[80%] space-y-4">
-      <p data-aos="fade-up" data-aos-duration="600">
+    <div className="w-full md:w-[80%] space-y-4">
+      <p className="text-sm mb-2">
         {title}
       </p>
       <ProgressBar

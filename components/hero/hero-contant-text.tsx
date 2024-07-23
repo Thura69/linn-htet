@@ -5,6 +5,8 @@ import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Circle } from "../circle";
 import { ArrowDownCircle } from "lucide-react";
+import { useMediaQuery } from "react-responsive";
+
 
 const inter = Poppins({ subsets: ["latin"], weight: "600" });
 
@@ -21,10 +23,19 @@ export const HeroContantText: React.FC<HeroContantTextType> = ({
   handleHover,
   active = false,
 }) => {
+
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1000px)",
+  });
+
   return (
     <div className=" h-[400px] relative lg:h-[650px] flex items-center justify-center" >
       <div className=" absolute">
-        <Circle leave={active} />
+        {
+      
+        isDesktop ?   <Circle leave={active} /> :   <div className="w-[250px] h-[250px] bg-[#f2f2f0] rounded-full"></div>
+        }
+
       </div>
       <motion.h1
         onMouseEnter={handleHover}
@@ -35,9 +46,9 @@ export const HeroContantText: React.FC<HeroContantTextType> = ({
         className={cn(
           inter.className,
           "relative tracking-wide",
-          "text-[40px]  sm:text-[50px]  md:text-[70px] lg:text-[75px] xl:text-[80px]",
+          "text-[40px]  sm:text-[50px] text-center  md:text-[70px] lg:text-[75px] xl:text-[80px]",
           indent &&
-            "indent-10 md:indent-[18vw] lg:indent-[5vw] xl:indent-[10vw]",
+            "indent-10 md:indent-[18vw] text-center lg:indent-[5vw] xl:indent-[10vw]",
           "leading-[54px] md:leading-[70px] lg:leading-[110px] "
         )}
       >

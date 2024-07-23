@@ -54,11 +54,16 @@ import ACTIONMODE from "@/public/images/bread-box/Frame 34580.png";
 import { SquareMap } from "@/components/bread-box/task-list-data";
 import Footer from "@/components/footer/footer";
 import { ReactLenis } from "@studio-freight/react-lenis";
+import { useMediaQuery } from "react-responsive";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { MobileMenu } from "@/components/mobile-menu";
 
 function Page() {
   const [active, setActive] = useState(false);
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 624px)",
+  });
 
   const handleHover = () => {
     setActive((prev) => !prev);
@@ -82,17 +87,15 @@ function Page() {
           </div>
         </div>
         <div className="bg-white overflow-hidden  container mx-auto">
-          <div className="py-5  pb-[200px]  space-y-20">
+          <div className="py-5  pb-[200px]  space-y-10 lg:space-y-16">
             {/* first section */}
-            <div className="w-full  gap-[20px] flex items-center bg-white">
+            <div className="w-full  gap-[20px] flex md:flex-row flex-col items-center bg-white">
               <Image
                 alt="bread-one"
-                className="w-[60%] "
+                className="w-auto md:w-[50%]"
                 src={BreadOne}
-                width={400}
-                height={400}
               />
-              <div className="w-[50%] flex gap-[40px] flex-col justify-start items-center">
+              <div className="md:w-[50%] w-full flex gap-[40px] flex-col justify-start items-center">
                 <Image
                   alt="bread-logo"
                   className="w-[40%]"
@@ -100,24 +103,15 @@ function Page() {
                   width={300}
                   height={300}
                 />
-
-                <p
-                  data-aos="zoom-out-left"
-                  data-aos-duration="600"
-                  className="w-[90%]"
-                >
-                  Stop using the app if it doesn&apos;t share enough information with
-                  the shop. My goal is to give customers all the details they
-                  need.
+                <p className="w-[90%]">
+                  Stop using the app if it doesn&apos;t share enough information
+                  with the shop. My goal is to give customers all the details
+                  they need.
                 </p>
               </div>
             </div>
 
-            <h3
-              data-aos="zoom-out-left"
-              data-aos-duration="600"
-              className=" text-[18px] my-4 mb-6 indent-[100px]"
-            >
+            <h3 className=" text-[16px] my-4 mb-6 indent-[60px] lg:indent-[100px]">
               Introducing our innovative food shop application designed to
               streamline the ordering process and reduce wait times. In response
               to the high demand at food shops, our app provides real-time
@@ -142,7 +136,6 @@ function Page() {
             </div>
 
             {/* second section */}
-
             {PROBLEMSTATEDATA.map((e, index) => (
               <ListShowData key={index} title={e.title} data={e.data} />
             ))}
@@ -151,7 +144,7 @@ function Page() {
               <ListShowData key={index} title={e.title} data={e.data} />
             ))}
 
-            <div className="flex">
+            <div className="flex md:flex-row flex-col md:space-y-0 space-y-10">
               <ProjectDuration />
               <ToolUsed figma mockup ai ps />
             </div>
@@ -162,37 +155,29 @@ function Page() {
 
             {/* FOOD PANDA SECTION */}
 
-            <div>
-              <div className=" flex items-center justify-center">
+            <div className="mt-[100px]">
+              <div className=" flex items-center  justify-center">
                 <Image alt="food" src={FOODPANDA} width={150} height={150} />
               </div>
-              <div className="flex  items-center gap-[30px]">
-                <div className="w-[50%]">
+              <div className="flex md:flex-row flex-col  items-center gap-[30px]">
+                <div className="md:w-[50%] my-5 md:my-0">
                   {GOODPOINTDATA.map((e, index) => (
                     <ListShowData key={index} title={e.title} data={e.data} />
                   ))}
                 </div>
                 <Image
-                  data-aos="fade-right"
-                  data-aos-duration="600"
                   alt="foodmockup"
-                  className="w-[50%]"
+                  className="md:w-[50%] w-auto"
                   src={FOODPANDAMOCKUP}
-                  width={200}
-                  height={200}
                 />
               </div>
-              <div className="flex items-center gap-[30px]">
+              <div className="flex md:flex-row flex-col items-center gap-[30px]">
                 <Image
                   alt="foodmockup"
-                  data-aos="fade-left"
-                  data-aos-duration="600"
-                  className="w-[50%]"
+                  className="md:w-[50%]  w-auto order-1"
                   src={FOODPANDAMOCKUPTWO}
-                  width={200}
-                  height={200}
                 />
-                <div className="w-[50%]">
+                <div className="md:w-[50%] order-2">
                   {PAINPOINTDATA.map((e, index) => (
                     <ListShowData key={index} title={e.title} data={e.data} />
                   ))}
@@ -204,43 +189,28 @@ function Page() {
 
             {/* GRAB SECTION */}
             <div>
-              <div className=" flex items-center justify-center">
-                <Image
-                  data-aos="fade-right"
-                  data-aos-duration="600"
-                  alt="food"
-                  src={GRABLOGO}
-                  width={150}
-                  height={150}
-                />
+              <div className=" flex items-center  mb-5 md:mb-0 justify-center">
+                <Image alt="food" src={GRABLOGO} width={150} height={150} />
               </div>
-              <div className="flex  items-center gap-[30px]">
-                <div className="w-[50%]">
+              <div className="flex md:flex-row flex-col my-5 md:my-0 space-y-10   items-center gap-[30px]">
+                <div className="md:w-[50%]">
                   {GRABGOODPOINT.map((e, index) => (
                     <ListShowData key={index} title={e.title} data={e.data} />
                   ))}
                 </div>
                 <Image
-                  data-aos="fade-left"
-                  data-aos-duration="600"
                   alt="foodmockup"
-                  className="w-[50%]"
+                  className="md:w-[50%] w-auto order-2"
                   src={GRAPMOCKUP}
-                  width={200}
-                  height={200}
                 />
               </div>
-              <div className="flex items-center gap-[30px]">
+              <div className="flex md:flex-row flex-col items-center  space-y-10 md:space-y-0  gap-[30px]">
                 <Image
-                  data-aos="fade-right"
-                  data-aos-duration="600"
                   alt="foodmockup"
-                  className="w-[50%]"
+                  className="md:w-[50%] w-auto  order-1"
                   src={GRAPMOCKUPTWO}
-                  width={200}
-                  height={200}
                 />
-                <div className="w-[50%]">
+                <div className="md:w-[50%] order-2">
                   {GRABPAINPOINT.map((e, index) => (
                     <ListShowData key={index} title={e.title} data={e.data} />
                   ))}
@@ -256,9 +226,7 @@ function Page() {
                 return (
                   <div key={index}>
                     <ProjectTitle color="yellow" title={e.title} />
-                    <p data-aos="fade-up" data-aos-duration="600">
-                      {e.data}
-                    </p>
+                    <p>{e.data}</p>
                     <div className=" space-y-5 my-[40px]">
                       {e.progress.map((progressData, index) => (
                         <ProjectProgressBar
@@ -301,18 +269,9 @@ function Page() {
             {USERSTORYBOARD.map((e, index) => (
               <div key={index}>
                 <ProjectTitle color="yellow" title={e.title} />
-                <p data-aos="fade-up" data-aos-duration="600">
-                  {e.data}
-                </p>
-                <div className="flex gap-[30px] my-[30px]">
-                  <Image
-                    data-aos="fade-right"
-                    data-aos-duration="600"
-                    alt="user"
-                    src={e.img}
-                    width={200}
-                    height={200}
-                  />
+                <p>{e.data}</p>
+                <div className="flex flex-col md:flex-row   gap-[30px] my-[30px]">
+                  <Image alt="user" src={e.img} width={200} height={200} />
                   <div className="flex flex-col justify-between">
                     <div>
                       <ProjectTitle
@@ -320,9 +279,7 @@ function Page() {
                         size="25"
                         title={e.userInfo[0].title}
                       />
-                      <p data-aos="fade-up" data-aos-duration="600">
-                        {e.userInfo[0].data}
-                      </p>
+                      <p>{e.userInfo[0].data}</p>
                     </div>
                     <div>
                       <ProjectTitle
@@ -330,13 +287,11 @@ function Page() {
                         size="25"
                         title={e.userInfo[1].title}
                       />
-                      <p data-aos="fade-up" data-aos-duration="600">
-                        {e.userInfo[1].data}
-                      </p>
+                      <p>{e.userInfo[1].data}</p>
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-wrap mt-[50px] gap-[50px]">
+                <div className="flex  flex-wrap mt-[50px] gap-[50px]">
                   {e.cards.map((e, index) => (
                     <StoryCard key={index} image={e.image} name={e.data} />
                   ))}
@@ -349,44 +304,26 @@ function Page() {
             {/* JOURNEY MAP */}
             <div>
               <ProjectTitle color="yellow" title={USERJOURNEYMAP[0].title!} />
-              <p data-aos="fade-up" data-aos-duration="600">
-                {USERJOURNEYMAP[0].data}
-              </p>
+              <p>{USERJOURNEYMAP[0].data}</p>
 
-              <div className="flex items-start justify-center gap-[30px] my-[30px]">
+              <div className="flex flex-col md:flex-row items-start justify-center gap-[30px] my-[30px]">
                 <Image
-                  data-aos="fade-up"
-                  data-aos-duration="600"
                   src={USERJOURNEYMAP[1].image!}
                   className="w-[200px] h-[200px]"
                   alt="thu thu"
-                  width={300}
-                  height={300}
                 />
                 <div className=" space-y-4">
-                  <p
-                    data-aos="fade-up"
-                    data-aos-duration="600"
-                    className=" font-bold"
-                  >
-                    {USERJOURNEYMAP[1].name}
-                  </p>
-                  <p data-aos="fade-up" data-aos-duration="600">
-                    {USERJOURNEYMAP[1].data}
-                  </p>
+                  <p className=" font-bold">{USERJOURNEYMAP[1].name}</p>
+                  <p>{USERJOURNEYMAP[1].data}</p>
                 </div>
               </div>
               <Image
-                data-aos="fade-up"
-                data-aos-duration="600"
                 src={ACTIONMODE}
                 alt="actionMode"
-                className="w-[1000px] my-[50px] mx-auto"
-                width={200}
-                height={200}
+                className="w-[1000px] my-[50px] lg:my-[100px] mx-auto"
               />
 
-              <div className=" space-y-4">
+              <div className=" space-y-10 lg:space-y-16">
                 {TASKLISTDATA.map((e, index) => (
                   <SquareMap key={index} title={e.title} data={e.data} />
                 ))}
@@ -399,12 +336,8 @@ function Page() {
             {FLOWDIAGRAM.map((e, index) => (
               <div key={index} className=" space-y-3">
                 <ProjectTitle color="yellow" title={e.title} />
-                <p data-aos="fade-up" data-aos-duration="600">
-                  {e.data}
-                </p>
+                <p>{e.data}</p>
                 <Image
-                  data-aos="fade-up"
-                  data-aos-duration="600"
                   src={e.image}
                   alt="ee"
                   className="w-[600px] pt-[60px] h-auto mx-auto"
@@ -483,7 +416,8 @@ function Page() {
           </div>
         </div>
         <Footer />
-        <BlurryCursor isActive={active} />
+        <MobileMenu />
+        {isDesktop && <BlurryCursor isActive={active} />}
       </ReactLenis>
     </>
   );

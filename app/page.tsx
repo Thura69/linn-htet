@@ -10,9 +10,14 @@ import { SocialLinks } from "@/components/social-links";
 import LinkButton from "@/components/links-button";
 import { Projects } from "@/components/projects";
 import Footer from "@/components/footer/footer";
+import { useMediaQuery } from "react-responsive";
+
 
 
 export default function Home() {
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 624px)",
+  });
   return (
     <>
       <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>

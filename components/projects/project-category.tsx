@@ -13,9 +13,9 @@ export const ProjectCategory: React.FC<ProjectCategoryType> = ({
   color = "#FFC529",
 }) => {
   return (
-    <div className="">
+    <div>
       <ProjectTitle color={color} title={title} />
-      <p data-aos="fade-up" data-aos-duration="600">
+      <p className="text-sm md:text-md">
         {data}
       </p>
     </div>

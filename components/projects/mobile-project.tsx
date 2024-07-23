@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import styles from './style.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 
@@ -13,7 +14,7 @@ export default function Index({
 }) {
   return (
     <div className='w-full'>
-      <div  className={''}>
+      <Link href={`${projects[0].link}`}  className={''}>
         <div className={'w-full'}>
           <Image  src={`/images/${projects[0].src}`} width={500} height={500}  alt={"image"} />
         </div>
@@ -22,7 +23,7 @@ export default function Index({
           <p className='text-textSecondary'>{projects[0].description}</p>
           <p>{projects[0].year}</p>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

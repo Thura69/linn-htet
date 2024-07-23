@@ -14,10 +14,10 @@ export const ListShowData: React.FC<ListShowType> = ({
 }) => {
   return (
     <div>
-      <ProjectTitle color={color} title={title} />
+      <ProjectTitle  color={color} title={title} />
       <ul className=" list-disc">
         {data.map((e, index) => (
-          <li data-aos="fade-up" data-aos-duration="600" key={index}>
+          <li key={index}>
             {e}
           </li>
         ))}

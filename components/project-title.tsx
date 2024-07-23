@@ -4,27 +4,30 @@ import React from "react";
 type ProjectTitleType = {
   title: string;
   size?: string;
-  color: "blue" | "yellow";
-  amount?: "lg" | "xl";
+  color: "blue" | "yellow" | "green" | "ligh-blue" | "black" | "sky-blue";
+  amount?: "lg" | "xl" | "md";
 };
 
 export const ProjectTitle: React.FC<ProjectTitleType> = ({
   title,
-  size = "30",
+  size = "35",
   color = "yellow",
   amount = "lg",
 }) => {
   return (
     <h3
-      data-aos="fade-up"
-      data-aos-duration="600"
       className={cn(
-        "text-[30px] mb-5 font-bold",
-        size && `text-[${size}px]`,
+        "text-[18px] mb-5 font-bold",
+        size && ` text-[20px] md:text-[30px]`,
         `text-[#FFC529]`,
         color === "blue" && "text-[#4062FF]",
         color === "yellow" && "text-[#FFC529]",
-        amount === "xl" && "text-[40px]"
+        color === "green" && "text-[#AEDA96]",
+        color === "ligh-blue" && "text-[#537FE7]",
+        color === "sky-blue" && "text-[#00D2E5]",
+        color === "black" && "text-black",
+        amount === "xl" && "text-[30px] md:text-[40px]",
+        amount === "md" && "text-[25px]"
       )}
     >
       {title}

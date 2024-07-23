@@ -14,9 +14,7 @@ export const SquareMap: React.FC<SquareMap> = ({ title, data }) => {
         {data.map((e, index) => (
           <div
             key={index}
-            data-aos="fade-up"
-            data-aos-duration="600"
-            className="w-[18%]  border h-auto p-5 border-[#FFC529] rounded-2xl"
+            className="w-[45%] md:w-[18%]  border h-auto p-5 border-[#FFC529] rounded-2xl"
           >
             {e}
           </div>

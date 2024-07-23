@@ -21,16 +21,9 @@ type ToolContainerTypes = {
 
 const ToolContainer: React.FC<ToolContainerTypes> = ({ src, name }) => {
   return (
-    <div className="flex flex-col items-center gap-5">
-      <Image
-        data-aos="fade-up"
-        data-aos-duration="600"
-        alt="tool-used"
-        src={src}
-      />
-      <p data-aos="fade-up" data-aos-duration="600">
-        {name}
-      </p>
+    <div className="flex flex-col  space-y-3 w-[80px] items-center ">
+      <Image alt="tool-used"  className=" scale-75 md:scale-100" src={src} />
+      <p className="text-xs text-center">{name}</p>
     </div>
   );
 };

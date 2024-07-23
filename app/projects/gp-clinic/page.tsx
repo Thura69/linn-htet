@@ -34,9 +34,14 @@ import UIPRESENTATIONFIVE from "@/public/images/gp-clinic/Frame 34584.png";
 import UIPRESENTATIONSIX from "@/public/images/gp-clinic/Frame 34585.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { MobileMenu } from "@/components/mobile-menu";
+import { useMediaQuery } from "react-responsive";
 
 function Page() {
   const [active, setActive] = useState(false);
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 624px)",
+  });
 
   const handleHover = () => {
     setActive((prev) => !prev);
@@ -60,17 +65,15 @@ function Page() {
           </div>
         </div>
         <div className="bg-white overflow-hidden container mx-auto">
-          <div className="py-5  pb-[200px]  space-y-20">
+          <div className="py-5  pb-[200px]  space-y-10 lg:space-y-16">
             {/* first section */}
-            <div className="w-full  gap-[20px] flex items-center bg-white">
+            <div className="w-full  gap-[20px] flex flex-col md:flex-row items-center bg-white">
               <Image
                 alt="bread-one"
-                className="w-[60%] "
+                className="w-full md:w-[60%] "
                 src={GPCLINIC}
-                width={400}
-                height={400}
               />
-              <div className="w-[50%] flex gap-[40px] flex-col justify-start items-center">
+              <div className="w-full md:w-[50%] flex gap-[40px] flex-col justify-start items-center">
                 <Image
                   alt="bread-logo"
                   className="w-[40%]"
@@ -79,7 +82,7 @@ function Page() {
                   height={300}
                 />
 
-                <p data-aos="zoom-out-left" className="w-[90%]">
+                <p  className="w-[90%]">
                   Stop using the app if it doesn&apos;t share enough information with
                   the shop. My goal is to give customers all the details they
                   need.
@@ -88,10 +91,9 @@ function Page() {
             </div>
 
             {/* first section */}
-            <div className=" grid grid-cols-3 justify-center items-center gap-4">
+            <div className=" grid grid-cols-2 justify-center items-center gap-4">
               {PROJECTCATEGORYDATA.map((data, index) => (
                 <ProjectCategory
-                  
                   color="blue"
                   key={data.id}
                   title={data.title}
@@ -113,7 +115,7 @@ function Page() {
 
             {/* project duration */}
 
-            <div className="flex">
+            <div className="flex md:flex-row flex-col md:space-y-0 space-y-10">
               <ProjectDuration />
               <ToolUsed color={"blue"} figma mockup ai />
             </div>
@@ -174,17 +176,13 @@ function Page() {
             {FLOWDIAGRAM.map((e, index) => (
               <div key={index} className=" space-y-3">
                 <ProjectTitle color="blue" title={e.title} />
-                <p data-aos="fade-up" data-aos-duration="600">
+                <p >
                   {e.data}
                 </p>
                 <Image
-                  data-aos="fade-left"
-                  data-aos-duration="600"
                   src={e.image}
                   alt="ee"
                   className="w-[600px]  pt-[60px] h-auto mx-auto"
-                  width={200}
-                  height={200}
                 />
               </div>
             ))}
@@ -195,17 +193,11 @@ function Page() {
               <div key={index}>
                 <ListShowData color="blue" title={e.title} data={e.data} />
                 <Image
-                  data-aos="fade-right"
-                  data-aos-duration="600"
                   src={e.image}
                   alt="ee"
                   className="w-[600px]  pt-[60px] h-auto mx-auto"
-                  width={200}
-                  height={200}
                 />
                 <p
-                  data-aos="fade-up"
-                  data-aos-duration="600"
                   className="mx-auto text-center my-[20px]"
                 >
                   The initial wireframe was crafted using a mockup application.
@@ -232,16 +224,11 @@ function Page() {
             <div>
               <ProjectTitle color="blue" title={"High-Fidelity Prototype"} />
               <Image
-                data-aos="fade-right"
-                data-aos-duration="600"
                 src={HIGHPROTO}
                 alt="ee"
                 className="w-[600px]  pt-[60px] h-auto mx-auto"
-                width={200}
-                height={200}
               />
               <p
-                data-aos="fade-up-right"
                 className="mx-auto text-center my-[20px]"
               >
                 Incorporating high-fidelity screens with a seamless user
@@ -255,58 +242,34 @@ function Page() {
 
             <div className=" space-y-6">
               <Image
-                data-aos="fade-right"
-                data-aos-duration="600"
                 src={UIPRESENTATIONONE}
                 alt="ee"
                 className="w-[800px]  pt-[60px] h-auto mx-auto"
-                width={300}
-                height={300}
               />
               <Image
-                data-aos="fade-left"
-                data-aos-duration="600"
                 src={UIPRESENTATIONTWO}
                 alt="ee"
                 className="w-[800px]  pt-[60px] h-auto mx-auto"
-                width={300}
-                height={300}
               />
               <Image
-                data-aos="fade-right"
-                data-aos-duration="600"
                 src={UIPRESENTATIONTHREE}
                 alt="ee"
                 className="w-[800px]  pt-[60px] h-auto mx-auto"
-                width={300}
-                height={300}
               />
               <Image
-                data-aos="fade-left"
-                data-aos-duration="600"
                 src={UIPRESENTATIONFOUR}
                 alt="ee"
                 className="w-[800px]  pt-[60px] h-auto mx-auto"
-                width={300}
-                height={300}
               />
               <Image
-                data-aos="fade-right"
-                data-aos-duration="600"
                 src={UIPRESENTATIONFIVE}
                 alt="ee"
                 className="w-[800px]  pt-[60px] h-auto mx-auto"
-                width={300}
-                height={300}
               />
               <Image
-                data-aos="fade-left"
-                data-aos-duration="600"
                 src={UIPRESENTATIONSIX}
                 alt="ee"
                 className="w-[800px]  pt-[60px] h-auto mx-auto"
-                width={300}
-                height={300}
               />
             </div>
 
@@ -316,17 +279,13 @@ function Page() {
             {PROJECTSUMMARY.map((e, index) => (
               <div key={index} className=" space-y-3">
                 <ProjectTitle color="blue" title={e.title} />
-                <p data-aos="fade-up" data-aos-duration="600">
+                <p >
                   {e.data}
                 </p>
                 <Image
-                  data-aos="fade-up"
-                  data-aos-duration="600"
                   src={e.image}
                   alt="ee"
                   className="w-[600px]  pt-[60px] h-auto mx-auto"
-                  width={200}
-                  height={200}
                 />
               </div>
             ))}
@@ -335,7 +294,8 @@ function Page() {
           </div>
         </div>
         <Footer />
-        <BlurryCursor isActive={active} />
+        <MobileMenu/>
+        {isDesktop && <BlurryCursor isActive={active} />}
       </ReactLenis>
     </>
   );

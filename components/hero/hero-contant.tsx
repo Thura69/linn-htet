@@ -7,6 +7,8 @@ import { Montserrat, Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import BlurryCursor from "../cursor";
 import GradientCursor from "../gradient-cursor";
+import { useMediaQuery } from "react-responsive";
+
 
 const inter = Poppins({ subsets: ["latin"], weight: "600" });
 
@@ -16,6 +18,9 @@ export const HeroContant = () => {
   const [active, setActive] = useState(false);
   const [isVideo, setIsvideo] = useState(false);
   const [start, setStart] = useState(false);
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 624px)",
+  });
 
   useEffect(() => {
     setStart(true);
@@ -140,7 +145,7 @@ export const HeroContant = () => {
             </motion.div>
           </motion.h1>
         </div>
-        {!isVideo && <BlurryCursor isActive={false} />}
+        {!isVideo  && <BlurryCursor isActive={false} />}
       </>
     );
 };

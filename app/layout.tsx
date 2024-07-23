@@ -4,6 +4,7 @@ import "./globals.css";
 import { WideNav } from "@/components/header/wide-nav";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
+import { MobileMenu } from "@/components/mobile-menu";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <WideNav />
 
         {children}
+      
       </body>
     </html>
   );

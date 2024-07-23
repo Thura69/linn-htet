@@ -23,13 +23,11 @@ const ProjectCount: React.FC<ProjectCountType> = ({ duration, title }) => {
     <div>
       <div>
         <h3
-          data-aos="fade-up"
-          data-aos-duration="600"
-          className=" text-[#37474F] text-[60px] font-bold"
+          className=" text-[#37474F] text-[30px] md:text-[60px] font-bold"
         >
           {duration}+
         </h3>
-        <p data-aos="fade-up" data-aos-duration="600">
+        <p>
           {title}
         </p>
       </div>

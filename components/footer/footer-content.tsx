@@ -50,7 +50,7 @@ const Nav = () => {
         <p>Design Diversions</p>
       </div>
       <div className=" w-full  md:w-[60%]  flex md:flex-row flex-col gap-5  justify-between  md:gap-20 ">
-        <div className="flex  w-[40%] flex-col gap-2">
+        <div className="flex  md:w-[40%] flex-col gap-2">
           <div className=" text-textSecondary">
             <LinkButton
               direction="right"

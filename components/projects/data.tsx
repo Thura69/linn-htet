@@ -14,16 +14,16 @@ export const projects = [
     client: "Ingamana",
     description:
       "We come to our General Practitioner Tablet Application, designed specifically for interview projects and sessions.",
-    src: "9.jpg",
+    src: "Cover Photo-4.jpg",
     year: 2021,
   },
   {
-    name: "Deep Space Alien",
-    link: "/projects/deep-space-alien",
+    name: "NIKOKI",
+    link: "/projects/nikoki",
     client: "Grow",
     description:
       "We're a studio dedicated to NFTs and the Metaverse, firmly believing in the future of blockchain technology, NFTs, the Metaverse, and the emerging realm of GameFi.",
-    src: "Group_45.png",
+    src: "Cover Photo-5.jpg",
     year: 2021,
   },
 
@@ -37,6 +37,33 @@ export const projects = [
     year: 2023,
   },
   {
+    name: "SSHR",
+    link: "/projects/SSHR",
+    client: "Wix Playground",
+    description:
+      "Animation projects primarily focus on creating music videos tailored to suit their respective themes.",
+    src: "sshr.png",
+    year: 2022,
+  },
+  {
+    name: "Gamer",
+    link: "/projects/gamer",
+    client: "POWELL—STUDIO",
+    description:
+      "The primary purpose of the streaming site is to enable users to watch games online and purchase points with MMK currency. These points are then send a gift to the streamers. Additionally, users can link their Facebook accounts and allocate points to their favorite streamers.",
+    src: "gamer.jpg",
+    year: 2023,
+  },
+  {
+    name: "LOGISTICS",
+    link: "/projects/logistics",
+    client: "Shader Studio",
+    description:
+      "Logo and branding incorporating their preferred destinations, seamlessly integrated with their brand identity.",
+    src: "logi.png",
+    year: 2020,
+  },
+  {
     name: "Cartoon Illustration",
     link: "/projects/cartoon-illustration",
     client: "analogueagency",
@@ -44,32 +71,5 @@ export const projects = [
       "This category features a diverse array of freelance projects specializing in illustration, showcasing various art styles.",
     src: "main-project-1.png",
     year: 2022,
-  },
-  {
-    name: "Animations",
-    link: "/projects/animations",
-    client: "Wix Playground",
-    description:
-      "Animation projects primarily focus on creating music videos tailored to suit their respective themes.",
-    src: "1.GIF",
-    year: 2022,
-  },
-  {
-    name: "NFT Website Portfolio",
-    link: "/projects/nft-website-portfolio",
-    client: "POWELL—STUDIO",
-    description:
-      "Aliens from far away are now on Mars, and they might attack Earth, risking the end of humanity.",
-    src: "18.png",
-    year: 2023,
-  },
-  {
-    name: "Logo and Branding",
-    link: "/projects/logo-and-branding",
-    client: "Shader Studio",
-    description:
-      "Logo and branding incorporating their preferred destinations, seamlessly integrated with their brand identity.",
-    src: "travelMeet.png",
-    year: 2020,
   },
 ];
