@@ -6,7 +6,7 @@ export const MENULINK: MenuLinkType[] = [
       {
         name: "Home",
         link: "/",
-        active:true
+        active:false
       },
       {
         name: "Projects",

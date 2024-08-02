@@ -5,17 +5,39 @@ import { useState } from "react";
 import BlurryCursor from "@/components/cursor";
 import { ProjectTitle } from "@/components/project-title";
 import ALIEAN from "@/public/images/DSA/20.png";
-import IMG_1 from "@/public/images/DSA/1.png";
-import IMG_2 from "@/public/images/DSA/2 About to land on Mars.png";
-import IMG_3 from "@/public/images/DSA/3-2.png";
-import IMG_4 from "@/public/images/DSA/4.png";
-import IMG_5 from "@/public/images/DSA/5.png";
-import IMG_6 from "@/public/images/DSA/6.png";
+import IMG_1 from "@/public/images/deep-space-alien/1.png";
+import IMG_2 from "@/public/images/deep-space-alien/2-2.png";
+import IMG_3 from "@/public/images/deep-space-alien/3-2.png";
+import IMG_4 from "@/public/images/deep-space-alien/4.png";
+import IMG_5 from "@/public/images/deep-space-alien/5-2.png";
+import IMG_6 from "@/public/images/deep-space-alien/6-2.png";
+import IMG_7 from "@/public/images/deep-space-alien/7.png";
+import IMG_8 from "@/public/images/deep-space-alien/8-2.png";
+import IMG_9 from "@/public/images/deep-space-alien/9-2.png";
+import IMG_10 from "@/public/images/deep-space-alien/10-2.png";
+import IMG_11 from "@/public/images/deep-space-alien/11.png";
+import IMG_12 from "@/public/images/deep-space-alien/12.png";
+import IMG_13 from "@/public/images/deep-space-alien/13.png";
+import IMG_14 from "@/public/images/deep-space-alien/14-2.png";
+import IMG_15 from "@/public/images/deep-space-alien/15-2.png";
+import IMG_16 from "@/public/images/deep-space-alien/16-2.png";
+import IMG_17 from "@/public/images/deep-space-alien/17-2.png";
+import IMG_18 from "@/public/images/deep-space-alien/18.png";
+import IMG_19 from "@/public/images/deep-space-alien/19.png";
+import IMG_20 from "@/public/images/deep-space-alien/20.png";
+import Footer from "@/components/footer/footer";
+import { useMediaQuery } from "react-responsive";
+
+
+
 import Image from "next/image";
 import { MobileMenu } from "@/components/mobile-menu";
 
 function Page() {
   const [active, setActive] = useState(false);
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 624px)",
+  });
 
   const handleHover = () => {
     setActive((prev) => !prev);
@@ -33,12 +55,13 @@ function Page() {
             />
           </div>
         </div>
-        <div className="bg-white overflow-hidden my-[50px] container mx-auto">
-          <ProjectTitle color="green" title=" NFT Website" amount="xl" />
-          <p className="text-[25px]">
+        <div className="bg-white overflow-hidden my-[50px]  container mx-auto ">
+          <ProjectTitle color="green" title=" NFT Website" />
+          <p>
             Aliens from far away are now on Mars, and they might attack Earth,
-            risking the end of humanity. We don&apos;t know why they&apos;re invading, but
-            if we don&apos;t protect our planet, we could be in serious trouble
+            risking the end of humanity. We don&apos;t know why they&apos;re
+            invading, but if we don&apos;t protect our planet, we could be in
+            serious trouble
           </p>
           <div className="my-[50px]">
             <ProjectTitle
@@ -46,68 +69,132 @@ function Page() {
               title={"Aliens arrived on Mars and established their base there"}
             />
             <div className="mx-auto space-y-5">
-              <div className="flex justify-start space-x-5  items-start">
-                <Image
-                  src={IMG_1}
-                  alt="ee"
-                  className="w-[400px] pt-[60px] h-auto"
-                  width={200}
-                  height={200}
-                />
-                <Image
-                  src={IMG_2}
-                  alt="ee"
-                  className="w-[400px]  pt-[60px] h-auto"
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <div className="flex ml-[50px] justify-center space-x-5 items-start">
-                <Image
-                  src={IMG_3}
-                  alt="ee"
-                  className="w-[400px]   h-auto"
-                  width={200}
-                  height={200}
-                />
-                <Image
-                  src={IMG_4}
-                  alt="ee"
-                  className="w-[400px]  h-auto"
-                  width={200}
-                  height={200}
-                />
+              <div className=" grid grid-cols-3 gap-5">
+                <Image src={IMG_1} alt="ee" />
+                <Image src={IMG_2} alt="ee" />
+                <Image src={IMG_3} alt="ee" />
+                <Image src={IMG_4} alt="ee" />
               </div>
             </div>
           </div>
-          f{/* second section */}
-          <ProjectTitle
-            color="green"
-            title={
-              "Aliens have started attacking major cities like New York and Tokyo. The invasion began in New York City, causing massive destruction and loss of life, impacting not only the city but the entire world."
-            }
-          />
           {/* second section */}
-          <div className="flex">
+          <p>
+            Aliens have started attacking major cities like New York and Tokyo.
+            The invasion began in New York City, causing massive destruction and
+            loss of life, impacting not only the city but the entire world.
+          </p>
+          <div className="flex justify-start gap-6">
             <Image
               src={IMG_5}
               alt="ee"
-              className="w-[600px]  pt-[60px] h-auto mx-auto"
-              width={200}
-              height={200}
+              className="w-[600px]  pt-[60px] h-auto "
             />
             <Image
               src={IMG_6}
               alt="ee"
-              className="w-[200px]  pt-[60px] h-auto mx-auto"
-              width={200}
-              height={200}
+              className="w-[200px]  pt-[60px] h-auto "
             />
           </div>
-        </div>
+          {/* second section */}
 
-        <BlurryCursor isActive={active} />
-        <MobileMenu/>
+          {/* third section */}
+          <p className=" mt-[50px]">
+            Cities are facing serious destruction, and there&apos;s a significant
+            loss of human lives. The Eiffel Tower is tragically damaged, and
+            earth is suffering considerable harm from the extraterrestrial
+            invasion.ife, impacting not only the city but the entire world.
+          </p>
+          <div className="flex justify-start gap-6">
+            <Image src={IMG_7} alt="ee" className="w-auto  pt-[60px] h-auto " />
+            <div>
+              <Image
+                src={IMG_8}
+                alt="ee"
+                className="w-auto  pt-[60px] h-auto "
+              />
+              <Image
+                src={IMG_9}
+                alt="ee"
+                className="w-auto  pt-[60px] h-auto "
+              />
+            </div>
+          </div>
+          {/* third section */}
+
+          {/* fourth section */}
+          <p className=" mt-[50px]">
+            People around the world are coming together to discuss and decide on
+            actions to defend against alien attacks. Global leaders are debating
+            and reaching agreements to unite humanity against extraterrestrial
+            invasions. Signed agreements by leaders signify a collective effort
+            to guard against potential alien threats, and global leaders are
+            taking decisive actions to protect against such attacks.
+          </p>
+          <div className="flex justify-start gap-6">
+            <div>
+              <Image
+                src={IMG_12}
+                alt="ee"
+                className="w-auto  pt-[60px] h-auto "
+              />
+              <Image
+                src={IMG_11}
+                alt="ee"
+                className="w-auto  pt-[60px] h-auto "
+              />
+            </div>
+            <Image
+              src={IMG_10}
+              alt="ee"
+              className="w-auto  pt-[60px] h-auto "
+            />
+          </div>
+          {/* fourth section */}
+          {/* five section */}
+          <p className=" mt-[50px]">
+            Top scientists and inventors from different countries are working
+            together to create mecha robots. They organize meetings and seminars
+            to discuss the development and construction of these robots.
+          </p>
+          <div className=" grid grid-cols-2 gap-5 mt-[50px]">
+            <Image src={IMG_13} alt="ee" />
+            <Image src={IMG_14} alt="ee" />
+          </div>
+          {/* five section */}
+
+          {/* six section */}
+          <p className=" mt-[50px]">
+            Soldiers and volunteers are being trained to pilot robots.
+            Specialized warriors are learning martial arts, and soldiers are
+            getting virtual reality training to operate mecha robots.
+          </p>
+          <div className=" grid grid-cols-2 gap-5 mt-[50px]">
+            <Image src={IMG_15} alt="ee" />
+            <Image src={IMG_16} alt="ee" />
+          </div>
+          {/* six section */}
+
+          {/* seven section */}
+          <p className=" mt-[50px]">
+            Getting ready to fight aliens in combat, Earth is facing alien
+            opponents on the battleground for the first time in history.
+          </p>
+          <div className=" grid grid-cols-2 gap-5 mt-[50px]">
+            <Image src={IMG_17} alt="ee" />
+            <Image src={IMG_18} alt="ee" />
+            <Image src={IMG_19} alt="ee" />
+            <Image src={IMG_20} alt="ee" />
+          </div>
+          {/* seven section */}
+          <p className=" mt-[50px] text-center max-w-[600px] pb-[200px] mx-auto">
+            This is the first part of the Deep Space Aliens script. The next
+            part introduces superheroes who emerge to help humanity in the
+            battle against aliens. Stay tuned for more!
+          </p>
+        </div>
+        <Footer />
+        {isDesktop && <BlurryCursor isActive={active} />}
+        <MobileMenu />
       </ReactLenis>
     </>
   );

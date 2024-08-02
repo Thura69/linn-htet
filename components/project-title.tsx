@@ -22,7 +22,7 @@ export const ProjectTitle: React.FC<ProjectTitleType> = ({
         `text-[#FFC529]`,
         color === "blue" && "text-[#4062FF]",
         color === "yellow" && "text-[#FFC529]",
-        color === "green" && "text-[#AEDA96]",
+        color === "green" && "text-[#25282B]",
         color === "ligh-blue" && "text-[#537FE7]",
         color === "sky-blue" && "text-[#00D2E5]",
         color === "black" && "text-black",

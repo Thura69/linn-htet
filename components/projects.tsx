@@ -24,6 +24,7 @@ export const Projects = () => {
           <Double projects={[projects[2], projects[3]]} reversed={true} />
           <Double projects={[projects[4], projects[5]]} />
           <Double projects={[projects[6], projects[7]]} reversed={true} />
+          
         </div>
       ) : (
         <div className="flex flex-col py-[50px] gap-4">
@@ -35,6 +36,8 @@ export const Projects = () => {
           <MobileProject projects={[projects[5]]} />
           <MobileProject projects={[projects[6]]} />
           <MobileProject projects={[projects[7]]} />
+          <MobileProject projects={[projects[8]]} />
+
         </div>
       )}
     </>

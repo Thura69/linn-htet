@@ -36,7 +36,7 @@ const Nav = () => {
   return (
     <div className="flex flex-col md:flex-row w-full gap-5 ">
       <div className="flex   md:w-[40%] flex-col gap-2">
-        <div className=" text-textSecondary">
+        <div className=" text-textSecondary ">
           <LinkButton
             direction="down"
             label="Quick Links"

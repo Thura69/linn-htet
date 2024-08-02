@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+// !w-full  md:w-[300px]
+
 export default function LinkButton({
   isActive,
   toggleMenu,
@@ -21,7 +23,7 @@ export default function LinkButton({
   direction: 'dot'|'down'| 'right' | 'none';
 }) {
   return (
-    <div className={cn(styles.button,'!w-full  md:w-[300px]')}>
+    <div className={cn(styles.button,' ')}>
       <motion.div
         className={styles.slider}
         animate={{ top: isActive ? "-100%" : "0%" }}

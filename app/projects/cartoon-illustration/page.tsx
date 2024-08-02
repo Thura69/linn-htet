@@ -11,6 +11,7 @@ import IMG_2 from "@/public/images/cartoon-illustration/2.jpg";
 import IMG_3 from "@/public/images/cartoon-illustration/3.jpg";
 import IMG_4 from "@/public/images/cartoon-illustration/4-2.jpg";
 import IMG_5 from "@/public/images/cartoon-illustration/6.jpg";
+import { MobileMenu } from "@/components/mobile-menu";
 
 function Page() {
   const [active, setActive] = useState(false);
@@ -74,6 +75,7 @@ function Page() {
           </div>
         </div>
         <Footer />
+        <MobileMenu/>
         <BlurryCursor isActive={active} />
       </ReactLenis>
     </>
