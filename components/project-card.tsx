@@ -50,7 +50,8 @@ function ProjectCard({
         <p>{data.name}</p>
         <p>{data.client}</p>
       </div>
-      <Image
+     <div className=" bg-[#f2f2f0] inline-block">
+     <Image
         // src={`/images/${data.src}`}
         ref={ref}
         src={src}
@@ -64,6 +65,7 @@ function ProjectCard({
           transition: "opacity 0.2s cubic-bezier(0.3, 0.2, 0.2, 0.8)",
         }}
       />
+     </div>
     </Link>
   );
 }
