@@ -36,8 +36,6 @@ function ProjectCard({
     offset: ["start start", "end start"],
   });
 
-  const src =
-    "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80";
 
   return (
     <Link
@@ -50,11 +48,10 @@ function ProjectCard({
         <p>{data.name}</p>
         <p>{data.client}</p>
       </div>
-     <div className=" bg-[#f2f2f0] inline-block">
+     <div className="  inline-block">
      <Image
-        // src={`/images/${data.src}`}
+        src={`/images/${data.src}`}
         ref={ref}
-        src={src}
         className="w-auto"
         width={500}
         height={500}

@@ -5,6 +5,7 @@ import styles from "./style.module.scss";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 
 export default function Index({
   projects,
@@ -13,9 +14,6 @@ export default function Index({
   projects: any;
   reversed?: any;
 }) {
-  const [isLoading, setLoading] = useState(true);
-  const [isLoading2, setLoading2] = useState(true);
-
   const firstImage = useRef<any>(null);
   const secondImage = useRef<any>(null);
   let requestAnimationFrameId: any = null;
@@ -23,6 +21,19 @@ export default function Index({
   let xPercent = reversed ? 100 : 0;
   let currentXPercent = reversed ? 100 : 0;
   const speed = 0.15;
+
+  const { ref: refOne, inView: inViewOne } = useInView({
+    triggerOnce: true,
+
+    threshold: 0.5,
+  });
+
+  const { ref: refTwo, inView: inViewTwo } = useInView({
+    triggerOnce: true,
+
+    threshold: 0.5,
+  });
+
 
   const manageMouseMove = (e: any) => {
     const { clientX } = e;
@@ -65,16 +76,16 @@ export default function Index({
           <div className={styles.stretchyWrapper}>
             {/* <BlurImage imgUrl={projects[0].src}/> */}
             <Image
+              ref={refOne}
               src={`/images/${projects[0].src}`}
-              className={cn(
-                " cursor-pointer ",
-                isLoading
-                  ? "grayscale blur-sm scale-110"
-                  : "grayscale-0 blur-0 scale-100"
-              )}
+              className={cn(" cursor-pointer ")}
               fill={true}
               alt={"image"}
-              onLoadingComplete={() => setLoading(false)}
+              style={{
+                opacity: inViewOne ? 1 : 0,
+      
+                transition: "opacity 0.2s cubic-bezier(0.3, 0.2, 0.2, 0.8)",
+              }}
             />
           </div>
         </Link>
@@ -89,18 +100,18 @@ export default function Index({
         <Link href={projects[1].link}>
           <div className={styles.stretchyWrapper}>
             <Image
+               ref={refTwo}
               src={`/images/${projects[1].src}`}
-              className={cn(
-                " cursor-pointer ",
-                isLoading2
-                  ? "grayscale blur-2xl scale-110"
-                  : "grayscale-0 blur-0 scale-100"
-              )}
+              className={cn(" cursor-pointer ")}
               blurDataURL={`/images/${projects[1].src}`}
               placeholder="blur"
               fill={true}
               alt={"image"}
-              onLoadingComplete={() => setLoading2(false)}
+              style={{
+                opacity: inViewTwo ? 1 : 0,
+      
+                transition: "opacity 0.2s cubic-bezier(0.3, 0.2, 0.2, 0.8)",
+              }}
             />
           </div>
         </Link>
