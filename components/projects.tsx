@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import Double from "./projects/double";
 import MobileProject from "./projects/mobile-project";

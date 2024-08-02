@@ -1,3 +1,4 @@
+'use client'
 import { Menu } from "lucide-react";
 import React, { useState, useEffect } from "react";
 MenuMobileContent;

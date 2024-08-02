@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import BlurryCursor from "@/components/cursor";
 import { HeroContant } from "@/components/hero/hero-contant";
