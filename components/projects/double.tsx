@@ -69,11 +69,9 @@ export default function Index({
               className={cn(
                 " cursor-pointer ",
                 isLoading
-                  ? "grayscale blur-2xl scale-110"
+                  ? "grayscale blur-sm scale-110"
                   : "grayscale-0 blur-0 scale-100"
               )}
-              blurDataURL={`/images/${projects[1].src}`}
-              placeholder="blur"
               fill={true}
               alt={"image"}
               onLoadingComplete={() => setLoading(false)}
@@ -94,7 +92,7 @@ export default function Index({
               src={`/images/${projects[1].src}`}
               className={cn(
                 " cursor-pointer ",
-                isLoading
+                isLoading2
                   ? "grayscale blur-2xl scale-110"
                   : "grayscale-0 blur-0 scale-100"
               )}

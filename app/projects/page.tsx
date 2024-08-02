@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { HeroContantText } from "@/components/hero/hero-contant-text";
 import ProjectCard from "@/components/project-card";
 import { ReactLenis } from "@studio-freight/react-lenis";
@@ -87,10 +87,13 @@ function Page() {
           </div>
         </div>
       </div>
-      <Footer />
-      {isDesktop && <ViewBlurryCursor isActive={active} />}
+     <Footer />
+      isDesktop && <ViewBlurryCursor isActive={active} />
     </ReactLenis>
+     
   );
 }
+
+ 
 
 export default Page;

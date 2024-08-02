@@ -1,12 +1,13 @@
-"use client";
+'use client'
 import Link from "next/link";
 import COVER from "@/public/images/graphic-2.jpg";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 type ProjectCardType = {
   name: string;
   client: string;
-  link:string,
+  link: string;
   description: string;
   src: string;
   year: number;
@@ -22,6 +23,11 @@ function ProjectCard({
   handleMouseLeave: any;
 }) {
   const container = useRef();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+
+    threshold: 0.5,
+  });
 
   const { scrollYProgress } = useScroll({
     //@ts-ignore
@@ -30,7 +36,8 @@ function ProjectCard({
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0px", "400px"]);
+  const src =
+    "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80";
 
   return (
     <Link
@@ -44,12 +51,18 @@ function ProjectCard({
         <p>{data.client}</p>
       </div>
       <Image
-        src={`/images/${data.src}`}
+        // src={`/images/${data.src}`}
+        ref={ref}
+        src={src}
         className="w-auto"
         width={500}
         height={500}
         alt="image"
-        style={{ objectFit: "cover" }}
+        style={{
+          opacity: inView ? 1 : 0,
+
+          transition: "opacity 0.2s cubic-bezier(0.3, 0.2, 0.2, 0.8)",
+        }}
       />
     </Link>
   );
