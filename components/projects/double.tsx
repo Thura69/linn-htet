@@ -54,6 +54,8 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
             <Image 
               src={`/images/${projects[0].src}`}
               className=' cursor-pointer '
+              placeholder='blur'
+              blurDataURL={`/images/${projects[0].src}`}
               fill={true}
               alt={"image"}
             />
@@ -72,6 +74,8 @@ export default function Index({projects, reversed}:{projects:any,reversed?:any})
             <Image 
               src={`/images/${projects[1].src}`}
               className=' cursor-pointer '
+              blurDataURL={`/images/${projects[1].src}`}
+              placeholder='blur'
               fill={true}
               alt={"image"}
             />
