@@ -8,6 +8,8 @@ import ViewBlurryCursor from "@/components/view-cursor";
 import { useMediaQuery } from "react-responsive";
 import ProjectCard from "@/components/project-card";
 import { projects } from "@/components/projects/data";
+import { MobileMenu } from "@/components/mobile-menu";
+
 
 
 
@@ -52,6 +54,8 @@ export default function Page() {
       </div>
       <Footer />
       {isDesktop && <ViewBlurryCursor isActive={active} />}
+      <MobileMenu />
+
     </ReactLenis>
   );
 }

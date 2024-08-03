@@ -20,7 +20,6 @@ export const WideNav = () => {
   const menuLinks = MENULINK[0];
   const pathname = usePathname();
 
-  console.log("Pathname",pathname)
 
 
   return (

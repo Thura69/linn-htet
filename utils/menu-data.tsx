@@ -35,6 +35,12 @@ export const MENULINK: MenuLinkType[] = [
         active:false
 
       },
+      {
+        name: "Capabilities",
+        link: "/capabilities",
+        active:false
+
+      },
     ],
   },
 ];

@@ -8,6 +8,8 @@ import BlurryCursor from "@/components/cursor";
 import Footer from "@/components/footer/footer";
 import { projects } from "@/components/projects/data";
 import ViewBlurryCursor from "@/components/view-cursor";
+import { MobileMenu } from "@/components/mobile-menu";
+
 
 function Page() {
   const [active, setActive] = useState(false);
@@ -88,7 +90,8 @@ function Page() {
         </div>
       </div>
      <Footer />
-      isDesktop && <ViewBlurryCursor isActive={active} />
+   {   isDesktop && <ViewBlurryCursor isActive={active} />}
+      <MobileMenu />
     </ReactLenis>
      
   );
