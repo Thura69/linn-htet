@@ -6,11 +6,13 @@ export const SizeCircle = ({
   leave,
   size,
   content,
+  handleClick,
   invert = false, // New prop to control direction
 }: {
   leave?: boolean;
   size: number;
   content: string;
+  handleClick:any;
   invert?: boolean; // New prop to control direction
 }) => {
   const ref: any = useRef(null);
@@ -53,8 +55,9 @@ export const SizeCircle = ({
     <motion.div
       ref={ref}
       style={{ x: springX, y: springY }}
+      onClick={handleClick}
       transition={{ ease: "easeOut", duration: 0.5 }}
-      initial={{ opacity: 0, y: 5, width: 0, height: 0 }}
+      initial={{ opacity: 0, y: 5, width: 180, height: 180 }}
       animate={{
         opacity: 1,
         y: 0,

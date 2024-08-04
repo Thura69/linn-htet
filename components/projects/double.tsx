@@ -92,7 +92,7 @@ export default function Index({
         <div className={styles.body}>
           <h3>{projects[0].name}</h3>
           <p>{projects[0].description}</p>
-          <p>{projects[0].year}</p>
+          {/* <p>{projects[0].year}</p> */}
         </div>
       </div>
 
@@ -118,7 +118,7 @@ export default function Index({
         <div className={styles.body}>
           <h3>{projects[1].name}</h3>
           <p>{projects[1].description}</p>
-          <p>{projects[1].year}</p>
+          {/* <p>{projects[1].year}</p> */}
         </div>
       </div>
     </div>

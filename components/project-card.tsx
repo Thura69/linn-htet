@@ -46,7 +46,7 @@ function ProjectCard({
     >
       <div>
         <p>{data.name}</p>
-        <p>{data.client}</p>
+        {/* <p>{data.client}</p> */}
       </div>
      <div className="  inline-block">
      <Image
