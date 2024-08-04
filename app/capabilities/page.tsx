@@ -32,7 +32,7 @@ export default function Page() {
 
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
-      <div className="flex items-center justify-center h-[75svh]">
+   <div className="flex items-center  justify-center h-[calc(100vh-200px)]">
         {state === "all" && <AllState handleState={handleState} />}
         {state === "ui/ux" && <Uiuxstate handleState={handleState} />}
         {state === "animation" && <AnimationState handleState={handleState} />}

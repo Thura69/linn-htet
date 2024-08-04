@@ -33,7 +33,7 @@ export default function Page() {
        <div className="container mx-auto">
         <HeroContantText title="Additional experience and projects related to design variations" />
         <div className="mt-[100px] space-y-16 pb-[200px]">
-          <div className=" grid grid-cols-3 gap-5 ">
+          <div className=" grid md:grid-cols-3 gap-5 ">
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}

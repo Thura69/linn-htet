@@ -1,6 +1,8 @@
 import React from "react";
 import { SocialLinks } from "../social-links";
 import LinkButton from "../links-button";
+import { ArrowDownCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function Content() {
   return (
@@ -24,7 +26,9 @@ const Section1 = () => {
 const Section2 = () => {
   return (
     <div className="flex justify-between   items-center">
-      <p className=" font-medium w-[50%]   text-[1.2rem] md:text-[4rem]">© 2024</p>
+      <p className=" font-medium w-[50%]   text-[1.2rem] md:text-[4rem]">
+        © 2024
+      </p>
       <h1 className="text-[1.2rem] md:text-[4rem]  w-[50%]  font-[500] leading-[0.8]">
         Linn Htet Aung
       </h1>
@@ -35,29 +39,42 @@ const Section2 = () => {
 const Nav = () => {
   return (
     <div className="flex flex-col md:flex-row w-full gap-5 ">
-      <div className="flex   md:w-[40%] flex-col gap-2">
-        <div className=" text-textSecondary ">
-          <LinkButton
-            direction="down"
-            label="Quick Links"
-            isActive={false}
-            toggleMenu={() => {}}
-          />
+      <div className="flex  md:w-[40%] flex-col gap-2">
+        <div className=" text-textSecondary  ">
+          <div className="flex gap-3 items-center justify-start">
+            <ArrowDownCircle className="w-5 h-5 md:w-6 md:h-6" />
+            <h3>QUICK LINKS</h3>
+          </div>
         </div>
-        <p>Home</p>
-        <p>Projects</p> 
-        <p>Case Studies</p>
-        <p>Design Diversions</p>
+
+        <p>
+          <Link href={"/"} target="blank">
+            Home
+          </Link>
+        </p>
+        <p>
+          <Link href={"/projects"} target="blank">
+            Projects
+          </Link>
+        </p>
+        <p>
+          <Link href={"/case-studies"} target="blank">
+          Case Studies
+          </Link>
+        </p>
+        <p>
+          <Link href={"/design-diversions"} target="blank">
+          Design Diversions
+          </Link>
+        </p>
       </div>
       <div className=" w-full  md:w-[60%]  flex md:flex-row flex-col gap-5  justify-between  md:gap-20 ">
         <div className="flex  md:w-[40%] flex-col gap-2">
           <div className=" text-textSecondary">
-            <LinkButton
-              direction="right"
-              label="Social Links"
-              isActive={false}
-              toggleMenu={() => {}}
-            />
+            <div className="flex gap-3 items-center justify-start">
+              <ArrowDownCircle className="w-5 h-5 md:w-6 md:h-6" />
+              <h3>SOCIAL LINKS</h3>
+            </div>
           </div>
           <p>Instagram</p>
           <p>Twitter</p>
@@ -65,19 +82,24 @@ const Nav = () => {
           <p>You Tube</p>
         </div>
         <div className="flex md:w-[40%] flex-col gap-2">
-        <div className=" text-textSecondary">
-          <LinkButton
-            direction="down"
-            label="Info Links"
-            isActive={false}
-            toggleMenu={() => {}}
-          />
+          <div className=" text-textSecondary">
+            <div className="flex gap-3 items-center justify-start">
+              <ArrowDownCircle className="w-5 h-5 md:w-6 md:h-6" />
+              <h3>INFO LINKS</h3>
+            </div>
+          </div>
+          <p>Certificates</p>
+          <p>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1Lx5GQFDuY78NOb4hoWKjjuOwUrqeLA3l/view"
+              }
+              target="_blank"
+            >
+              Resume
+            </Link>
+          </p>
         </div>
-        <p>Certificates</p>
-        <p>Resume</p>
-        {/* <p>Case Studies</p>
-        <p>Design Diversions</p> */}
-      </div>
       </div>
     </div>
   );

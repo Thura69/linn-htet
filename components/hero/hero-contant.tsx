@@ -145,7 +145,7 @@ export const HeroContant = () => {
             </motion.div>
           </motion.h1>
         </div>
-        {!isVideo  && <BlurryCursor isActive={false} />}
+        { isDesktop && !isVideo  && <BlurryCursor isActive={false} />}
       </>
     );
 };

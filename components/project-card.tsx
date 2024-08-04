@@ -45,10 +45,10 @@ function ProjectCard({
       className="relative space-y-2 "
     >
       <div>
-        <p>{data.name}</p>
+        <p className="text-[12px] md:text-[14px]">{data.name}</p>
         {/* <p>{data.client}</p> */}
       </div>
-     <div className="  inline-block">
+     <div className=" bg-slate-200  inline-block">
      <Image
         src={`/images/${data.src}`}
         ref={ref}

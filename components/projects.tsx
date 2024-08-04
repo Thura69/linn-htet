@@ -28,7 +28,7 @@ export const Projects = () => {
           
         </div>
       ) : (
-        <div className="flex flex-col py-[50px] gap-4">
+        <div className="flex flex-col py-[50px]  gap-4">
           <MobileProject projects={[projects[0]]} />
           <MobileProject projects={[projects[1]]} />
           <MobileProject projects={[projects[2]]} />

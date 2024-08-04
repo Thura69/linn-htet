@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import BlurryCursor from "@/components/cursor";
 import { HeroContant } from "@/components/hero/hero-contant";
@@ -11,8 +11,7 @@ import LinkButton from "@/components/links-button";
 import { Projects } from "@/components/projects";
 import Footer from "@/components/footer/footer";
 import { useMediaQuery } from "react-responsive";
-
-
+import { ArrowDownCircle } from "lucide-react";
 
 export default function Home() {
   const isDesktop = useMediaQuery({
@@ -23,28 +22,16 @@ export default function Home() {
       <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
         <HeroContant />
         <div className="container  mx-auto">
-        <div className="grid  grid-cols-2  col-end-2">
+          <div className="grid  grid-cols-2  col-end-2">
+            <div className="flex gap-3 items-center justify-start">
+              <ArrowDownCircle className="w-5 h-5 md:w-6 md:h-6" />
+              <h3>PROJECTS</h3>
+            </div>
+          </div>
 
-          <LinkButton
-            direction="down"
-            label=" Projects"
-            isActive={false}
-            toggleMenu={() => {}}
-          />
-
-          <LinkButton
-            direction="right"
-            label="Designs"
-            isActive={false}
-            toggleMenu={() => {}}
-          />
+          <Projects />
         </div>
-
-         <Projects/>
-
-        </div>
-        <Footer/>
-
+        <Footer />
 
         <MobileMenu />
       </ReactLenis>
