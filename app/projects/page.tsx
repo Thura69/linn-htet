@@ -53,14 +53,15 @@ function Page() {
               data={projects[3]}
             />
           </div>
-          <div className=" grid md:grid-cols-2  gap-5  space-y-5 ">
-            <div className=" col-span-2">
+          <div className=" col-span-2">
               <ProjectCard
                 handleMouseEnter={handleMouseEnter}
                 handleMouseLeave={handleMouseLeave}
                 data={projects[8]}
               />
             </div>
+          <div className=" grid md:grid-cols-2 gap-5 ">
+
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}

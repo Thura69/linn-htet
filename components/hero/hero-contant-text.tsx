@@ -46,7 +46,7 @@ export const HeroContantText: React.FC<HeroContantTextType> = ({
         className={cn(
           inter.className,
           "relative tracking-wide",
-          "text-[40px]  sm:text-[50px] text-center  md:text-[70px] lg:text-[75px] xl:text-[80px]",
+          "text-[40px] sm:text-[50px] text-center md:text-[70px] lg:text-[75px] xl:text-[80px]",
           indent &&
             "indent-10 md:indent-[18vw] text-center lg:indent-[5vw] xl:indent-[10vw]",
           "leading-[54px] md:leading-[70px] lg:leading-[110px] "
@@ -54,7 +54,7 @@ export const HeroContantText: React.FC<HeroContantTextType> = ({
       >
         {title}
       </motion.h1>
-      <ArrowDownCircle className=" w-7 h-7 absolute animate-bounce bottom-[20px]" />
+      <ArrowDownCircle className=" w-7 h-7 absolute animate-bounce bottom-[10px]" />
     </div>
   );
 };

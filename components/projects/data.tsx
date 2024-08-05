@@ -65,7 +65,7 @@ export const projects = [
   },
   {
     name: "Cartoon Illustration",
-    link: "/projects/cartoon-illustration",
+    link: "/projects/illustrations",
     client: "analogueagency",
     description:
       "This category features a diverse array of freelance projects specializing in illustration, showcasing various art styles.",

@@ -69,7 +69,7 @@ function Page() {
               title={"Aliens arrived on Mars and established their base there"}
             />
             <div className="mx-auto space-y-5">
-              <div className=" grid grid-cols-3 gap-5">
+              <div className=" grid grid-cols-1 md:grid-cols-3 gap-5">
                 <Image src={IMG_1} alt="ee" />
                 <Image src={IMG_2} alt="ee" />
                 <Image src={IMG_3} alt="ee" />
@@ -130,12 +130,12 @@ function Page() {
             to guard against potential alien threats, and global leaders are
             taking decisive actions to protect against such attacks.
           </p>
-          <div className="flex justify-start gap-6">
+          <div className="flex flex-col md:flex-row justify-start  gap-6">
             <div>
               <Image
                 src={IMG_12}
                 alt="ee"
-                className="w-auto  pt-[60px] h-auto "
+                className=" w-auto pt-[60px] h-auto "
               />
               <Image
                 src={IMG_11}
@@ -156,7 +156,7 @@ function Page() {
             together to create mecha robots. They organize meetings and seminars
             to discuss the development and construction of these robots.
           </p>
-          <div className=" grid grid-cols-2 gap-5 mt-[50px]">
+          <div className=" grid md:grid-cols-2 gap-5 mt-[50px]">
             <Image src={IMG_13} alt="ee" />
             <Image src={IMG_14} alt="ee" />
           </div>
@@ -168,7 +168,7 @@ function Page() {
             Specialized warriors are learning martial arts, and soldiers are
             getting virtual reality training to operate mecha robots.
           </p>
-          <div className=" grid grid-cols-2 gap-5 mt-[50px]">
+          <div className=" grid md:grid-cols-2 gap-5 mt-[50px]">
             <Image src={IMG_15} alt="ee" />
             <Image src={IMG_16} alt="ee" />
           </div>
@@ -179,7 +179,7 @@ function Page() {
             Getting ready to fight aliens in combat, Earth is facing alien
             opponents on the battleground for the first time in history.
           </p>
-          <div className=" grid grid-cols-2 gap-5 mt-[50px]">
+          <div className=" grid md:grid-cols-2 gap-5 mt-[50px]">
             <Image src={IMG_17} alt="ee" />
             <Image src={IMG_18} alt="ee" />
             <Image src={IMG_19} alt="ee" />

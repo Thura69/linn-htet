@@ -26,7 +26,7 @@ export default function Page() {
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
       {/* <HeroContantText title="Reach out to me directly for any inquiries or collaboration opportunities" /> */}
-      <div className="container my-5  flex flex-col md:flex-row mx-auto gap-[50px]">
+      <div className="container my-5  flex flex-col md:flex-row mx-auto  gap-[50px]">
         <Image
           ref={refOne}
           src={LINN}
@@ -38,7 +38,7 @@ export default function Page() {
             transition: "opacity 0.2s cubic-bezier(0.3, 0.2, 0.2, 0.8)",
           }}
         />
-        <div className="md:w-[50%] space-y-5">
+        <div className="md:w-[45%]  space-y-10 mb-10 mb:mb-0 md:space-y-5">
           <h3>
             I am Linn Htet Aung, a reportage and portrait photographer
             originally from Kharkiv, Ukraine, now living and working in Lisbon,
@@ -78,15 +78,13 @@ export default function Page() {
             you!
           </p>
 
-          <div className="flex gap-5">
+          <div className="flex  gap-5">
             <div className=" flex gap-3">
               <ArrowRightCircle />
               <Link
                 target="_blank"
                 className="hover:underline"
-                href={
-                  "/contact/resume"
-                }
+                href={"/contact/resume"}
               >
                 Resume
               </Link>

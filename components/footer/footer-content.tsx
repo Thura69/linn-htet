@@ -41,59 +41,66 @@ const Nav = () => {
     <div className="flex flex-col md:flex-row w-full gap-5 ">
       <div className="flex  md:w-[40%] flex-col gap-2">
         <div className=" text-textSecondary  ">
-          <div className="flex gap-3 items-center justify-start">
-            <ArrowDownCircle className="w-5 h-5 md:w-6 md:h-6" />
+          <div className="flex gap-3 items-center text-[14px] md:text-md justify-start">
+            <ArrowDownCircle className="w-4 h-4 md:w-6 md:h-6" />
             <h3>QUICK LINKS</h3>
           </div>
         </div>
 
         <p>
-          <Link href={"/"} target="blank">
+          <Link href={"/"} className=" hover:underline" target="blank">
             Home
           </Link>
         </p>
         <p>
-          <Link href={"/projects"} target="blank">
+          <Link href={"/projects"} className=" hover:underline" target="blank">
             Projects
           </Link>
         </p>
         <p>
-          <Link href={"/case-studies"} target="blank">
-          Case Studies
+          <Link
+            href={"/case-studies"}
+            className=" hover:underline"
+            target="blank"
+          >
+            Case Studies
           </Link>
         </p>
         <p>
-          <Link href={"/design-diversions"} target="blank">
-          Design Diversions
+          <Link
+            href={"/design-diversions"}
+            className=" hover:underline"
+            target="blank"
+          >
+            Design Diversions
           </Link>
         </p>
       </div>
       <div className=" w-full  md:w-[60%]  flex md:flex-row flex-col gap-5  justify-between  md:gap-20 ">
         <div className="flex  md:w-[40%] flex-col gap-2">
           <div className=" text-textSecondary">
-            <div className="flex gap-3 items-center justify-start">
-              <ArrowDownCircle className="w-5 h-5 md:w-6 md:h-6" />
+            <div className="flex gap-3 items-center text-[14px] md:text-md justify-start">
+              <ArrowDownCircle className="w-4 h-4 md:w-6 md:h-6" />
               <h3>SOCIAL LINKS</h3>
             </div>
           </div>
-          <p>Instagram</p>
-          <p>Twitter</p>
-          <p>Behance</p>
-          <p>You Tube</p>
+          <p className=" hover:underline">Instagram</p>
+          <p className=" hover:underline">Twitter</p>
+          <p className=" hover:underline">Behance</p>
+          <p className=" hover:underline">You Tube</p>
         </div>
         <div className="flex md:w-[40%] flex-col gap-2">
           <div className=" text-textSecondary">
-            <div className="flex gap-3 items-center justify-start">
-              <ArrowDownCircle className="w-5 h-5 md:w-6 md:h-6" />
+            <div className="flex gap-3 items-center text-[14px] md:text-md justify-start">
+              <ArrowDownCircle className="w-4 h-4 md:w-6 md:h-6" />
               <h3>INFO LINKS</h3>
             </div>
           </div>
-          <p>Certificates</p>
+          <p className=" hover:underline">Certificates</p>
           <p>
             <Link
-              href={
-                "https://drive.google.com/file/d/1Lx5GQFDuY78NOb4hoWKjjuOwUrqeLA3l/view"
-              }
+              className=" hover:underline"
+              href={"/contact/resume"}
               target="_blank"
             >
               Resume

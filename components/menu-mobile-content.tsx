@@ -13,8 +13,8 @@ export const MenuMobileContent = () => {
 
   return (
     <>
-      <div className=" h-[100svh] ml-[-2px] relative flex items-center justify-center  ">
-        <div className="fixed container  flex items-center justify-start top-[18px] px-[57px]  ">
+      <div className=" h-[100svh] ml-[1px] relative flex items-center justify-center  ">
+        <div className="fixed container  flex items-center justify-start top-[20px]   px-[70px]  ">
           <Logo />
         </div>
         {isDesktop ? <Circle /> : <NoMotionCircle />}
