@@ -42,7 +42,7 @@ function ProjectCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       href={data.link}
-      className="relative border space-y-2 "
+      className="relative  space-y-2 "
     >
       <div>
         <p className="text-[12px] md:text-[14px]">{data.name}</p>
@@ -52,7 +52,7 @@ function ProjectCard({
      <Image
         src={`/images/${data.src}`}
         ref={ref}
-        className="w-full border"
+        className="w-full"
         width={800}
         height={800}
         alt="image"
