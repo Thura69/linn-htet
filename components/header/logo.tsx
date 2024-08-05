@@ -17,7 +17,7 @@ export const Logo = () => {
     <div
       className={cn(
         inter.className,
-        "font-bold items-end flex flex-col gap-[-10px]   space-y-[-8px] text-[18px] md:text-[22px]"
+        " font-semibold items-end flex flex-col gap-[-10px]    space-y-[-8px] text-[18px] md:text-[18px]"
       )}
     >
      <p>Linn Htet</p>

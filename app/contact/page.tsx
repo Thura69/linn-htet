@@ -26,7 +26,7 @@ export default function Page() {
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
       {/* <HeroContantText title="Reach out to me directly for any inquiries or collaboration opportunities" /> */}
-      <div className="container my-5  flex flex-col md:flex-col mx-auto gap-[50px]">
+      <div className="container my-5  flex flex-col md:flex-row mx-auto gap-[50px]">
         <Image
           ref={refOne}
           src={LINN}
@@ -62,8 +62,8 @@ export default function Page() {
             <h3 className="font-bold text-[18px]">Love</h3>
             <p>
               Love fuels my passion for photography. Every time I press the
-              shutter, it's an expression of this deep affection, even if I
-              don't always realize it.
+              shutter, it&apos;s an expression of this deep affection, even if I
+              don&apos;t always realize it.
             </p>
           </div>
           <div>
@@ -85,7 +85,7 @@ export default function Page() {
                 target="_blank"
                 className="hover:underline"
                 href={
-                  "https://drive.google.com/file/d/1Lx5GQFDuY78NOb4hoWKjjuOwUrqeLA3l/view"
+                  "/contact/resume"
                 }
               >
                 Resume

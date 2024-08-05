@@ -31,7 +31,7 @@ function Page() {
         <HeroContantText title="I enjoy bringing UI screens to life through real-world projects." />
 
         <div className="mt-[100px] space-y-16 pb-[200px]">
-          <div className=" grid grid-cols-2 md:grid-cols-3 gap-5 ">
+          <div className=" grid md:grid-cols-2 gap-5 ">
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
@@ -53,7 +53,7 @@ function Page() {
               data={projects[3]}
             />
           </div>
-          <div className=" grid grid-cols-2 md:grid-cols-3 gap-5  space-y-5 ">
+          <div className=" grid md:grid-cols-2  gap-5  space-y-5 ">
             <div className=" col-span-2">
               <ProjectCard
                 handleMouseEnter={handleMouseEnter}

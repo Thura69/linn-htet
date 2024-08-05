@@ -39,43 +39,19 @@ function Page() {
               <ProjectTitle color="black" title={"Portrait Illustrations"} />
 
               <div className=" space-y-10">
-                <Image
-                  alt="i-house"
-                  className="w-[900px]"
-                  src={IMG_1}
-                  width={1000}
-                  height={1000}
-                />
-                <div className="flex flex-wrap gap-10 justify-between">
-                  <Image
-                    alt="i-house"
-                    className="w-[450px]"
-                    src={IMG_2}
-                    width={1000}
-                    height={1000}
-                  />
-                  <Image
-                    alt="i-house"
-                    className="w-[450px]"
-                    src={IMG_3}
-                    width={1000}
-                    height={1000}
-                  />
-                
+                <Image alt="i-house" src={IMG_1} />
+                <div className="flex  gap-10 justify-between">
+                  <Image alt="i-house" className="w-1/2" src={IMG_2} />
+                  <Image alt="i-house" className="w-1/2" src={IMG_3} />
                 </div>
-                <Image
-                    alt="i-house"
-                    className="w-auto"
-                    src={IMG_5}
-                    width={1000}
-                    height={1000}
-                  />
+                  <Image alt="i-house" className="w-auto" src={IMG_4} />
+                  <Image alt="i-house" className="w-auto" src={IMG_5} />
               </div>
             </div>
           </div>
         </div>
         <Footer />
-        <MobileMenu/>
+        <MobileMenu />
         <BlurryCursor isActive={active} />
       </ReactLenis>
     </>
