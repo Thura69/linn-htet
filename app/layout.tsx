@@ -5,6 +5,7 @@ import { WideNav } from "@/components/header/wide-nav";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { MobileMenu } from "@/components/mobile-menu";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -22,9 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <WideNav />
-
         {children}
-      
+        <SpeedInsights />
       </body>
     </html>
   );

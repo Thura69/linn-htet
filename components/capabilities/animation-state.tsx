@@ -14,7 +14,7 @@ export const AnimationState = ({
     Aos.init();
   }, []);
 
-  return (
+return (
     <div className=" w-[70%] max-auto h-[600px]  flex items-center justify-center relative">
       <div className="text-center ">
         <h3 className=" flex gap-3 text-[70px] mb-3 ">

@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 
 export const metadata:Metadata = {
-    title:"Case Studies",
-    description:"Case Studies"
+    title:"Capabilities",
+    description:"Capabilities"
 }
 
 
