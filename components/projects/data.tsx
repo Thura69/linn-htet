@@ -1,5 +1,6 @@
 export const projects = [
   {
+    id:1,
     name: "Bread-Box",
     client: "ET Studio",
     link: "/projects/bread-box",
@@ -9,6 +10,7 @@ export const projects = [
     year: 2022,
   },
   {
+    id:2,
     name: "GP Clinic",
     link: "/projects/gp-clinic",
     client: "Ingamana",
@@ -18,6 +20,7 @@ export const projects = [
     year: 2021,
   },
   {
+    id:3,
     name: "NIKOKI",
     link: "/projects/nikoki",
     client: "Grow",
@@ -27,7 +30,8 @@ export const projects = [
     year: 2021,
   },
 
-  {
+  { 
+    id:4,
     name: "Mascot Character Development",
     link: "/projects/mascot-character-development",
     client: "Decimal",
@@ -37,6 +41,7 @@ export const projects = [
     year: 2023,
   },
   {
+    id:5,
     name: "SSHR",
     link: "/projects/sshr",
     client: "Wix Playground",
@@ -46,6 +51,7 @@ export const projects = [
     year: 2022,
   },
   {
+    id:6,
     name: "Gamer",
     link: "/projects/gamer",
     client: "POWELL—STUDIO",
@@ -55,15 +61,17 @@ export const projects = [
     year: 2023,
   },
   {
+    id:7,
     name: "LOGISTICS",
     link: "/projects/logistics",
     client: "Shader Studio",
     description:
       "Logo and branding incorporating their preferred destinations, seamlessly integrated with their brand identity.",
-    src: "cover_7.jpg",
+    src: "logistic.png",
     year: 2020,
   },
   {
+    id:8,
     name: "Cartoon Illustration",
     link: "/projects/illustrations",
     client: "analogueagency",
@@ -73,24 +81,27 @@ export const projects = [
     year: 2022,
   },
   {
+    id:9,
     name: "Animation",
-    link: "/projects/cartoon-illustration",
+    link: "/projects/animations",
     client: "analogueagency",
     description:
       "This category features a diverse array of freelance projects specializing in illustration, showcasing various art styles.",
-    src: "1.GIF",
+    src: "animations-cv.png",
     year: 2022,
   },
   {
+    id:10,
     name: "Northern Lights Exam Centre Information Website",
     link: "/projects/northern-lights",
     client: "analogueagency",
     description:
       "The Exam Centre Information website offers essential details about exam schedules and locations for students. Its user-friendly design ensures easy access to all necessary information for a smooth examination experience.",
-    src: "northern_lights_exam.png",
+    src: "northern.png",
     year: 2022,
   },
   {
+    id:11,
     name: "NFT Website",
     link: "/projects/deep-space-alien",
     client: "analogueagency",
@@ -100,6 +111,7 @@ export const projects = [
     year: 2022,
   },
   {
+    id:12,
     name: "Illustrations",
     link: "/projects/illustrations",
     client: "analogueagency",

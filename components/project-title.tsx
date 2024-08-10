@@ -4,7 +4,7 @@ import React from "react";
 type ProjectTitleType = {
   title: string;
   size?: string;
-  color: "blue" | "yellow" | "green" | "ligh-blue" | "black" | "sky-blue";
+  color: "blue" | "yellow" | "green" | "ligh-blue" | "black" | "sky-blue" | "dark-blue";
   amount?: "lg" | "xl" | "md";
 };
 
@@ -26,6 +26,7 @@ export const ProjectTitle: React.FC<ProjectTitleType> = ({
         color === "ligh-blue" && "text-[#537FE7]",
         color === "sky-blue" && "text-[#00D2E5]",
         color === "black" && "text-black",
+        color === "dark-blue" && "text-[#5e87c9]",
         amount === "xl" && "text-[30px] md:text-[40px]",
         amount === "md" && "text-[25px]"
       )}

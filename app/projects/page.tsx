@@ -35,49 +35,39 @@ function Page() {
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
-              data={projects[0]}
-            />
-            <ProjectCard
-              handleMouseEnter={handleMouseEnter}
-              handleMouseLeave={handleMouseLeave}
-              data={projects[1]}
-            />
-            <ProjectCard
-              handleMouseEnter={handleMouseEnter}
-              handleMouseLeave={handleMouseLeave}
               data={projects[2]}
             />
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
-              data={projects[3]}
+              data={projects[4]}
             />
           </div>
-          <div className=" col-span-2">
+          {/* <div className=" col-span-2">
               <ProjectCard
                 handleMouseEnter={handleMouseEnter}
                 handleMouseLeave={handleMouseLeave}
                 data={projects[8]}
               />
-            </div>
+            </div> */}
           <div className=" grid md:grid-cols-2 gap-5 ">
 
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
-              data={projects[5]}
+              data={projects[9]}
             />
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
               data={projects[6]}
             />
-             <ProjectCard
+             {/* <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
               data={projects[7]}
-            />
-              <ProjectCard
+            /> */}
+              {/* <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
               data={projects[4]}
@@ -86,7 +76,7 @@ function Page() {
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
               data={projects[9]}
-            />
+            /> */}
           </div>
         </div>
       </div>

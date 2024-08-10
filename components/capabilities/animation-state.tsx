@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { SizeCircle } from "@/components/size-circle";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ArrowDownCircle } from "lucide-react";
 
 type StateType = "animation" | "ui/ux" | "drawing" | "all";
 
@@ -16,7 +17,7 @@ export const AnimationState = ({
 
 return (
     <div className=" w-[70%] max-auto h-[600px]  flex items-center justify-center relative">
-      <div className="text-center ">
+    <div className="text-center  flex flex-col gap-3 items-center justify-center">
         <h3 className=" flex gap-3 text-[70px] mb-3 ">
           I Do{" "}
           <div data-aos="fade-up" className=" font-bold">
@@ -25,17 +26,15 @@ return (
           </div>
         </h3>
         <p data-aos="fade-up" className="w-[400px]  mx-auto">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
-          impedit iste dolorem repellendus dolores tempora ea unde, architecto
-          laborum quos minima vel ipsam numquam magnam obcaecati, assumenda amet
-          expedita eius?
+        I design compelling animations that turn concepts into dynamic visuals. My focus is on creating smooth, eye-catching sequences that effectively convey messages and enhance user engagement.
         </p>
+        <ArrowDownCircle  data-aos="fade-right" className="w-5 h-5 md:w-6 md:h-6" />
       </div>
       <div className=" absolute right-[0%] top-[10%]">
         <SizeCircle
           handleClick={() => handleState("ui/ux")}
           size={200}
-          content="UI/UX ဆွဲသည်။"
+          content="Illustration"
         />
       </div>
       <div className=" absolute bottom-[7%] left-[0%]">
@@ -43,7 +42,7 @@ return (
           handleClick={() => handleState("drawing")}
           size={180}
           invert
-          content="ချစ်တက်သည်။"
+          content="Mastcot Character Development"
         />
       </div>
     </div>

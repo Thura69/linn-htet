@@ -14,7 +14,7 @@ export const AllState = ({
         <SizeCircle
           handleClick={() => handleState("ui/ux")}
           size={210}
-          content="UI/UX ဆွဲသည်။"
+          content="Illustration"
         />
       </div>
       <h3 className="  text-[90px] ">I Do</h3>
@@ -22,7 +22,7 @@ export const AllState = ({
         <SizeCircle
           handleClick={() => handleState("animation")}
           size={200}
-          content="Animations လုပ်သည်။"
+          content="Mastcot Character Development"
         />
       </div>
       <div className=" absolute bottom-[7%] left-[20%]">
@@ -30,7 +30,7 @@ export const AllState = ({
           handleClick={() => handleState("drawing")}
           size={180}
           invert
-          content="ချစ်တက်သည်။"
+          content="Animation"
         />
       </div>
     </div>

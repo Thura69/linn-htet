@@ -12,6 +12,7 @@ import { Projects } from "@/components/projects";
 import Footer from "@/components/footer/footer";
 import { useMediaQuery } from "react-responsive";
 import { ArrowDownCircle } from "lucide-react";
+import { CustomImageLoader } from "@/components/custom-imageloader";
 
 export default function Home() {
   const isDesktop = useMediaQuery({
@@ -28,8 +29,11 @@ export default function Home() {
               <h3>PROJECTS</h3>
             </div>
           </div>
+        <div className="w-[754px] mt-[100px] mb-[500px] h-[449px]">
+        <CustomImageLoader />
+        </div>
 
-          <Projects />
+          {/* <Projects /> */}
         </div>
         <Footer />
 

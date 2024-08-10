@@ -42,19 +42,19 @@ function ProjectCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       href={data.link}
-      className="relative  space-y-2 "
+      className="relative    space-y-2 "
     >
       <div>
         <p className="text-[12px] md:text-[14px]">{data.name}</p>
         {/* <p>{data.client}</p> */}
       </div>
-     <div className=" bg-slate-200  inline-block">
+     <div className=" bg-slate-200 ">
      <Image
         src={`/images/${data.src}`}
         ref={ref}
-        className="w-full"
-        width={800}
-        height={800}
+        className=" "
+        width={1000}
+        height={1000}
         alt="image"
         style={{
           opacity: inView ? 1 : 0,

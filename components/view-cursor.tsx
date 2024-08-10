@@ -59,7 +59,7 @@ export default function ViewBlurryCursor({ isActive }: { isActive: boolean }) {
         }}
         className={cn("top-0  flex items-center justify-center left-0 fixed rounded-full z-[999]  pointer-events-none",isActive && "border-2 text-sm")}
         ref={circle}
-      >{isActive && "View"}</div>
+      >{isActive && "👀"}</div>
     </div>
   );
 }

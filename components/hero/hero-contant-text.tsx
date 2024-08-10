@@ -29,7 +29,7 @@ export const HeroContantText: React.FC<HeroContantTextType> = ({
   });
 
   return (
-    <div className=" h-[400px] relative lg:h-[650px] flex items-center justify-center" >
+    <div className=" h-[400px]   relative lg:h-[calc(100svh-150px)] flex items-center justify-center" >
       <div className=" absolute">
         {
       
@@ -46,10 +46,10 @@ export const HeroContantText: React.FC<HeroContantTextType> = ({
         className={cn(
           inter.className,
           "relative tracking-wide",
-          "text-[40px] sm:text-[50px] text-center md:text-[70px] lg:text-[75px] xl:text-[80px]",
+          "text-[40px] sm:text-[50px] text-start   md:text-[70px] lg:text-[75px] xl:text-[80px]",
           indent &&
-            "indent-10 md:indent-[18vw] text-center lg:indent-[5vw] xl:indent-[10vw]",
-          "leading-[54px] md:leading-[70px] lg:leading-[110px] "
+            "indent-10 md:indent-[18vw] text-start lg:indent-[5vw] xl:indent-[10vw]",
+          "leading-[54px] md:leading-[70px]  lg:leading-[110px] "
         )}
       >
         {title}

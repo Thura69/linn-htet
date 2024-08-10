@@ -68,7 +68,7 @@ export const SizeCircle = ({
       exit={{ opacity: 0, width: 0, height: 0 }}
       className={cn(
         "bg-[#f2f2f0]",
-        "w-[100px] h-[100px] hover:border cursor-pointer flex items-center justify-center lg:w-[420px] lg:h-[420px] rounded-full"
+        "w-[100px] h-[100px] hover:border cursor-pointer flex items-center justify-center text-center lg:w-[420px] lg:h-[420px] rounded-full"
       )}
      
     >

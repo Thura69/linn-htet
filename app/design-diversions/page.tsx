@@ -10,7 +10,6 @@ import ProjectCard from "@/components/project-card";
 import { projects } from "@/components/projects/data";
 import { MobileMenu } from "@/components/mobile-menu";
 
-
 export default function Page() {
   const [active, setActive] = useState(false);
 
@@ -28,7 +27,7 @@ export default function Page() {
 
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
-       <div className="container mx-auto">
+      <div className="container mx-auto">
         <HeroContantText title="Additional experience and projects related to design variations" />
         <div className="mt-[100px] space-y-16 pb-[200px]">
           <div className=" grid md:grid-cols-2 gap-5 ">
@@ -42,7 +41,12 @@ export default function Page() {
               handleMouseLeave={handleMouseLeave}
               data={projects[10]}
             />
-              <ProjectCard
+            <ProjectCard
+              handleMouseEnter={handleMouseEnter}
+              handleMouseLeave={handleMouseLeave}
+              data={projects[8]}
+            />
+            <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
               data={projects[11]}
@@ -53,7 +57,6 @@ export default function Page() {
       <Footer />
       {isDesktop && <ViewBlurryCursor isActive={active} />}
       <MobileMenu />
-
     </ReactLenis>
   );
 }

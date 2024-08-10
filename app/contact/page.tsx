@@ -5,7 +5,7 @@ import LINN from "@/public/images/linn-htet.jpg";
 import Image from "next/image";
 import { MiniFooter } from "@/components/footer/mini-footer";
 import Link from "next/link";
-import { ArrowRightCircle } from "lucide-react";
+import { ArrowRightCircle, ChevronRight, ChevronsRight } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { useMediaQuery } from "react-responsive";
@@ -26,11 +26,11 @@ export default function Page() {
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
       {/* <HeroContantText title="Reach out to me directly for any inquiries or collaboration opportunities" /> */}
-      <div className="container my-5  flex flex-col md:flex-row mx-auto  gap-[50px]">
+      <div className="container my-[40px]  flex  mx-auto  gap-[50px]">
         <Image
           ref={refOne}
           src={LINN}
-          className="md:w-[50%] rounded"
+          className=" w-[600px] h-[600px] rounded"
           alt="linn"
           style={{
             opacity: inViewOne ? 1 : 0,
@@ -40,47 +40,38 @@ export default function Page() {
         />
         <div className="md:w-[45%]  space-y-10 mb-10 mb:mb-0 md:space-y-5">
           <h3>
-            I am Linn Htet Aung, a reportage and portrait photographer
-            originally from Kharkiv, Ukraine, now living and working in Lisbon,
-            Portugal. My work captures the essence of fleeting moments, focusing
-            on the dynamic interplay between time and our place within it.
+            My passion for design and technology ignited early on, but it was
+            during my university years that I truly found my calling in UI/UX
+            design. Though I initially pursued a different path, I couldn&apos;t
+            ignore the creativity and satisfaction I felt when crafting user
+            interfaces. I knew then that my professional journey would be in
+            UI/UX design, and I&apos;ve never looked back. What started as a hobby
+            quickly turned into a fulfilling career, where I now get to blend my
+            love for aesthetics and functionality to create meaningful user
+            experiences.
           </h3>
-          <h3>
-            {" "}
-            My photography is guided by three core values: trust, love, and
-            courage.
-          </h3>
           <div>
-            <h3 className="font-bold text-[18px]">Trust</h3>
+            <h3 className="font-bold text-[#0A66C2] text-[24px]">Trust</h3>
             <p>
-              Trust between the photographer and the model leads to candid and
-              beautiful images. It not only enhances the results but also makes
-              the process enjoyable.
+            Empathy drives my design process. Understanding the user&apos;s needs and challenges is key to creating interfaces that are not only functional but also meaningful and satisfying to use.
             </p>
           </div>
           <div>
-            <h3 className="font-bold text-[18px]">Love</h3>
+          <h3 className="font-bold text-[#0A66C2] text-[24px]">Creativity</h3>
             <p>
-              Love fuels my passion for photography. Every time I press the
-              shutter, it&apos;s an expression of this deep affection, even if I
-              don&apos;t always realize it.
+            Creativity is at a heart of my work. Every design decision is an opportunity to explore new ideas and craft visually compelling interfaces that resonate with users on an emotional level.
             </p>
           </div>
           <div>
-            <h3 className="font-bold text-[18px]">Courage</h3>
+          <h3 className="font-bold text-[#0A66C2] text-[24px]">Innovation</h3>
             <p>
-              Courage means being open to new views, ideas, and feelings.
-              Without it, photography loses its meaning.
+            Innovation pushes me to constantly explore new trends, tools, and methodologies. It&apos;s about staying ahead of the curve and delivering solutions that are not only relevant today but will stand the test of time. I would be thrilled to bring my passion for design and user experience to your next project, and to help create digital products that truly make a difference!
             </p>
           </div>
-          <p>
-            I would be delighted to share my visual perception of the world with
-            you!
-          </p>
 
           <div className="flex  gap-5">
             <div className=" flex gap-3">
-              <ArrowRightCircle />
+              <ChevronsRight />
               <Link
                 target="_blank"
                 className="hover:underline"
@@ -90,7 +81,7 @@ export default function Page() {
               </Link>
             </div>
             <div className=" flex gap-3">
-              <ArrowRightCircle />
+              <ChevronsRight />
               <a className="hover:underline" href="mailto:someone@example.com">
                 Contact
               </a>
