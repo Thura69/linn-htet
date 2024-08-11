@@ -29,11 +29,11 @@ export default function Home() {
               <h3>PROJECTS</h3>
             </div>
           </div>
-        <div className="w-[754px] mt-[100px] mb-[500px] h-[449px]">
+        {/* <div className="w-[754px] mt-[100px] mb-[500px] h-[449px]">
         <CustomImageLoader />
-        </div>
+        </div> */}
 
-          {/* <Projects /> */}
+          <Projects />
         </div>
         <Footer />
 
