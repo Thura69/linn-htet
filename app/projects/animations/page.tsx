@@ -82,7 +82,7 @@ export default function Page() {
           {/* second part */}
           <div>
             <ProjectTitle color="dark-blue" title={"Preview clips"} />
-            <div className=" grid  grid-cols-2 gap-2">
+            <div className=" grid  md:grid-cols-2 gap-2">
               <Image alt="blur-img" src={GIF_1} />
               <Image alt="blur-img" src={GIF_2} />
               <Image alt="blur-img" src={GIF_3} />
@@ -110,7 +110,7 @@ export default function Page() {
           {/* four part */}
           <div>
             <ProjectTitle color="dark-blue" title={"Preview clips"} />
-            <div className=" grid border-2  grid-cols-2 gap-2">
+            <div className=" grid   md:grid-cols-2 gap-2">
               <Image alt="blur-img" src={GIF_6} />
               <Image alt="blur-img" src={GIF_7} />
               <Image alt="blur-img" src={GIF_8} />

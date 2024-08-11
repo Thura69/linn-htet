@@ -7,9 +7,6 @@ export const MiniFooter = () => {
       <div className=" container mx-auto flex gap-4 flex-col md:flex-row items-center justify-between">
         <ul className="flex gap-5 items-center  justify-between">
           <li className=" cursor-pointer hover:underline duration-500">
-            <Link href={""}>Behance</Link>
-          </li>
-          <li className=" cursor-pointer hover:underline duration-500">
             <Link href={"https://www.linkedin.com/in/linnhtetaunglha?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>LinkedIn</Link>
           </li>
           <li className=" cursor-pointer hover:underline duration-500">

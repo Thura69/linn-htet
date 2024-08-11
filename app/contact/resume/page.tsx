@@ -13,7 +13,7 @@ export default function Page() {
       });
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
-      <PDFViewer fileUrl={"/cv.pdf"} />
+     <PDFViewer  fileUrl={"/cv.pdf"} />
       <MobileMenu />
     </ReactLenis>
   );

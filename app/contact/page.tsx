@@ -26,11 +26,11 @@ export default function Page() {
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
       {/* <HeroContantText title="Reach out to me directly for any inquiries or collaboration opportunities" /> */}
-      <div className="container my-[40px]  flex  mx-auto  gap-[50px]">
+      <div className="container my-[40px]  flex flex-col md:flex-row mx-auto  gap-[50px]">
         <Image
           ref={refOne}
           src={LINN}
-          className=" w-[600px] h-[600px] rounded"
+          className=" w-auto h-auto md:w-[600px] md:h-[600px] rounded"
           alt="linn"
           style={{
             opacity: inViewOne ? 1 : 0,

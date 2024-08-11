@@ -10,7 +10,7 @@ export const SocialLinks = () => {
   return (
     <div>
       <ul>
-        <div className="flex gap-3 my-4 items-center text-[14px] md:text-md justify-start">
+        <div className="flex gap-3   my-4 items-center text-[14px] md:text-md justify-start">
           <div className="w-[10px] h-[10px] bg-textSecondary  rounded-full"></div>
           <h3>Social Links</h3>
         </div>

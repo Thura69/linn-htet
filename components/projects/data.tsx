@@ -46,7 +46,7 @@ export const projects = [
     link: "/projects/sshr",
     client: "Wix Playground",
     description:
-      "Animation projects primarily focus on creating music videos tailored to suit their respective themes.",
+      "Smilax Global Co., Ltd specializes in innovative High Level Security Solutions and bespoke in-house developments for businesses of all sizes. Our mission is to deliver creative, effective, and cost-efficient solutions that resonate with our clients, leveraging extensive technical expertise in both technical and business realms. ",
     src: "sshr.png",
     year: 2022,
   },

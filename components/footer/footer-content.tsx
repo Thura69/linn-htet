@@ -42,7 +42,7 @@ const Nav = () => {
       <div className="flex  md:w-[40%] flex-col gap-2">
         <div className=" text-textSecondary  ">
           <div className="flex gap-3 items-center text-[14px] md:text-md justify-start">
-            <ArrowDownCircle className="w-4 h-4 md:w-6 md:h-6" />
+            <ArrowDownCircle className="w-4 h-4 " />
             <h3>QUICK LINKS</h3>
           </div>
         </div>
@@ -80,23 +80,26 @@ const Nav = () => {
         <div className="flex  md:w-[40%] flex-col gap-2">
           <div className=" text-textSecondary">
             <div className="flex gap-3 items-center text-[14px] md:text-md justify-start">
-              <ArrowDownCircle className="w-4 h-4 md:w-6 md:h-6" />
+              <ArrowDownCircle className="w-4 h-4 " />
               <h3>SOCIAL LINKS</h3>
             </div>
           </div>
-          <p className=" hover:underline">Instagram</p>
-          <p className=" hover:underline">Twitter</p>
-          <p className=" hover:underline">Behance</p>
-          <p className=" hover:underline">You Tube</p>
+         <ul className=" space-y-2">
+          <li className=" cursor-pointer hover:underline duration-500">
+            <Link href={"https://www.linkedin.com/in/linnhtetaunglha?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>LinkedIn</Link>
+          </li>
+          <li className=" cursor-pointer hover:underline duration-500">
+            <Link href={"https://www.instagram.com/_ko__linn_?igsh=MW5ka284dThpcDg0aw=="}>Instagram</Link>
+          </li>
+         </ul>
         </div>
         <div className="flex md:w-[40%] flex-col gap-2">
           <div className=" text-textSecondary">
             <div className="flex gap-3 items-center text-[14px] md:text-md justify-start">
-              <ArrowDownCircle className="w-4 h-4 md:w-6 md:h-6" />
+              <ArrowDownCircle className="w-4 h-4" />
               <h3>INFO LINKS</h3>
             </div>
           </div>
-          <p className=" hover:underline">Certificates</p>
           <p>
             <Link
               className=" hover:underline"
