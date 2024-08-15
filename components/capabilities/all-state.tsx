@@ -20,14 +20,14 @@ export const AllState = ({
       <h3 className="  text-[90px] ">I Do</h3>
       <div className=" absolute right-[10%] top-[20%]">
         <SizeCircle
-          handleClick={() => handleState("animation")}
+          handleClick={() => handleState("drawing")}
           size={200}
           content="Mastcot Character Development"
         />
       </div>
       <div className=" absolute bottom-[7%] left-[20%]">
         <SizeCircle
-          handleClick={() => handleState("drawing")}
+          handleClick={() => handleState("animation")}
           size={180}
           invert
           content="Animation"

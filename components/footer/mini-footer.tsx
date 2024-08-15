@@ -10,7 +10,7 @@ export const MiniFooter = () => {
             <Link href={"https://www.linkedin.com/in/linnhtetaunglha?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>LinkedIn</Link>
           </li>
           <li className=" cursor-pointer hover:underline duration-500">
-            <Link href={"https://www.instagram.com/_ko__linn_?igsh=MW5ka284dThpcDg0aw=="}>Instagram</Link>
+            <Link href={"https://www.  instagram.com/_ko__linn_?igsh=MW5ka284dThpcDg0aw=="}>Instagram</Link>
           </li>
         </ul>
         <h3>© 2024 Linn Htet Aung</h3>

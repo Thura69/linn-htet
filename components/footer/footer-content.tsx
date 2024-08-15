@@ -48,19 +48,19 @@ const Nav = () => {
         </div>
 
         <p>
-          <Link href={"/"} className=" hover:underline" target="blank">
+          <Link href={"/"} className="text-textSecondary  hover:text-white hover:underline" target="blank">
             Home
           </Link>
         </p>
         <p>
-          <Link href={"/projects"} className=" hover:underline" target="blank">
+          <Link href={"/projects"} className="text-textSecondary  hover:text-white hover:underline" target="blank">
             Projects
           </Link>
         </p>
         <p>
           <Link
             href={"/case-studies"}
-            className=" hover:underline"
+            className="text-textSecondary  hover:text-white hover:underline"
             target="blank"
           >
             Case Studies
@@ -69,7 +69,7 @@ const Nav = () => {
         <p>
           <Link
             href={"/design-diversions"}
-            className=" hover:underline"
+            className="text-textSecondary  hover:text-white hover:underline"
             target="blank"
           >
             Design Diversions
@@ -85,10 +85,10 @@ const Nav = () => {
             </div>
           </div>
          <ul className=" space-y-2">
-          <li className=" cursor-pointer hover:underline duration-500">
+          <li className="text-textSecondary  hover:text-white cursor-pointer hover:underline duration-500">
             <Link href={"https://www.linkedin.com/in/linnhtetaunglha?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>LinkedIn</Link>
           </li>
-          <li className=" cursor-pointer hover:underline duration-500">
+          <li className="text-textSecondary  hover:text-white cursor-pointer hover:underline duration-500">
             <Link href={"https://www.instagram.com/_ko__linn_?igsh=MW5ka284dThpcDg0aw=="}>Instagram</Link>
           </li>
          </ul>
@@ -102,7 +102,7 @@ const Nav = () => {
           </div>
           <p>
             <Link
-              className=" hover:underline"
+              className="text-textSecondary  hover:text-white hover:underline"
               href={"/contact/resume"}
               target="_blank"
             >

@@ -25,7 +25,7 @@ export const projects = [
     link: "/projects/nikoki",
     client: "Grow",
     description:
-      "We're a studio dedicated to NFTs and the Metaverse, firmly believing in the future of blockchain technology, NFTs, the Metaverse, and the emerging realm of GameFi.",
+      "Nikoki HR Software is a comprehensive human resource management system designed to streamline and automate essential HR functions. From employee onboarding and payroll management to performance tracking and leave management, Nikoki offers an all-in-one solution that simplifies HR processes and enhances organizational efficiency.",
     src: "cover_3.jpg",
     year: 2021,
   },
@@ -66,7 +66,7 @@ export const projects = [
     link: "/projects/logistics",
     client: "Shader Studio",
     description:
-      "Logo and branding incorporating their preferred destinations, seamlessly integrated with their brand identity.",
+      "Logistics is a mobile application designed to facilitate the delivery of parcels over long distances using trucks. It serves as a communication platform between vehicle owners and merchants, enabling seamless parcel dispatch and receipt.",
     src: "logistic.png",
     year: 2020,
   },

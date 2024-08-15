@@ -6,40 +6,31 @@ export const MENULINK: MenuLinkType[] = [
       {
         name: "Home",
         link: "/",
-        active:false
+        active: false,
       },
       {
         name: "Projects",
         link: "/projects",
-        active:false
+        active: false,
       },
     ],
     two: [
       {
         name: "Case Studies",
         link: "/case-studies",
-        active:false
-
+        active: false,
       },
       {
-        name: "Design Diversions",
-        link: "/design-diversions",
-        active:false
-
+        name: "Contact",
+        link: "/contact",
+        active: false,
       },
     ],
     three: [
       {
-        name: "Contact",
-        link: "/contact",
-        active:false
-
-      },
-      {
         name: "Capabilities",
         link: "/capabilities",
-        active:false
-
+        active: false,
       },
     ],
   },

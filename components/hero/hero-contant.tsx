@@ -95,7 +95,7 @@ export const HeroContant = () => {
             transition={{ ease: "easeOut", duration: 0.5 }}
             className={cn(
               inter.className,
-              " indent-10 md:indent-[18vw] lg:indent-[5vw] xl:indent-[10vw] relative tracking-wide text-[40px] sm:text-[50px] md:text-[70px] lg:text-[75px] xl:text-[80px]  leading-[54px] md:leading-[70px] lg:leading-[110px]"
+              " indent-0 md:indent-[18vw] lg:indent-[5vw] xl:indent-[10vw] relative tracking-wide text-[40px] sm:text-[50px] md:text-[70px] lg:text-[75px] xl:text-[80px]  leading-[54px] md:leading-[70px] lg:leading-[110px]"
             )}
           >
           Developing user-centered designs for the ultimate user experience.

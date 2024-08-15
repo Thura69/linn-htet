@@ -48,7 +48,7 @@ export const HeroContantText: React.FC<HeroContantTextType> = ({
           "relative tracking-wide",
           "text-[40px] sm:text-[50px] text-start   md:text-[70px] lg:text-[75px] xl:text-[80px]",
           indent &&
-            "indent-10 md:indent-[18vw] text-start lg:indent-[5vw] xl:indent-[10vw]",
+            " md:indent-[18vw] text-start lg:indent-[5vw] xl:indent-[10vw]",
           "leading-[54px] md:leading-[70px]  lg:leading-[110px] "
         )}
       >
