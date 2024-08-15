@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { HeroContantText } from "@/components/hero/hero-contant-text";
 import ProjectCard from "@/components/project-card";
 import { ReactLenis } from "@studio-freight/react-lenis";
@@ -9,7 +9,6 @@ import Footer from "@/components/footer/footer";
 import { projects } from "@/components/projects/data";
 import ViewBlurryCursor from "@/components/view-cursor";
 import { MobileMenu } from "@/components/mobile-menu";
-
 
 function Page() {
   const [active, setActive] = useState(false);
@@ -40,7 +39,7 @@ function Page() {
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
-              data={projects[4]}
+              data={projects[6]}
             />
           </div>
           {/* <div className=" col-span-2">
@@ -51,7 +50,6 @@ function Page() {
               />
             </div> */}
           <div className=" grid md:grid-cols-2 gap-5 ">
-
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
@@ -60,14 +58,15 @@ function Page() {
             <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
-              data={projects[6]}
+              data={projects[4]}
             />
-             {/* <ProjectCard
+
+            {/* <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
               data={projects[7]}
             /> */}
-              {/* <ProjectCard
+            {/* <ProjectCard
               handleMouseEnter={handleMouseEnter}
               handleMouseLeave={handleMouseLeave}
               data={projects[4]}
@@ -80,14 +79,11 @@ function Page() {
           </div>
         </div>
       </div>
-     <Footer />
-   {   isDesktop && <ViewBlurryCursor isActive={active} />}
+      <Footer />
+      {isDesktop && <ViewBlurryCursor isActive={active} />}
       <MobileMenu />
     </ReactLenis>
-     
   );
 }
-
- 
 
 export default Page;
