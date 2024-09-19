@@ -20,11 +20,11 @@ export const MENULINK: MenuLinkType[] = [
         link: "/case-studies",
         active: false,
       },
-      {
-        name: "Contact",
-        link: "/contact",
-        active: false,
-      },
+      // {
+      //   name: "Contact",
+      //   link: "/contact",
+      //   active: false,
+      // },
     ],
     three: [
       {

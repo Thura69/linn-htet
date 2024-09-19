@@ -27,11 +27,11 @@ const MENULISTS = [
     link: "/design-diversions",
     x: 50,
   },
-  {
-    name: "Contact",
-    link: "/contact",
-    x: 60,
-  },
+  // {
+  //   name: "Contact",
+  //   link: "/contact",
+  //   x: 60,
+  // },
 ];
 
 export const MenuList = ({ className }: { className?: string }) => {
